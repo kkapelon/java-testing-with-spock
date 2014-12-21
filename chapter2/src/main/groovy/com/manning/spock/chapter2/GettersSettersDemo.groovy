@@ -9,6 +9,6 @@ class GettersSettersDemo {
 		person.setLastName("Alexander")
 		
 		System.out.println("Person first name is "+person.getFirstName())
-		System.out.println("Person name name is "+person.getLastName())
+		System.out.println("Person last name is "+person.getLastName())
 	}
 }
