@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.StringTokenizer;
 
 /**
  * A sample class that takes a block of text and counts the occurences of words
@@ -18,7 +17,7 @@ public class WordDetector {
 	
 	public void parseText(String text)
 	{
-		String[] words = text.split(" "); //Code used only for illustration purposes
+		String[] words = text.split("[\\s,:]"); //Code used only for illustration purposes
 		for(String word:words)
 		{
 			recordCount(word);

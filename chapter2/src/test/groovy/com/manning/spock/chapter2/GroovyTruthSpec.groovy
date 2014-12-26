@@ -7,7 +7,7 @@ class GroovyTruthSpec extends spock.lang.Specification{
 	def "demo for Groovy truth"() {
 		when: "a line of text is processed"
 		WordDetector wordDetector = new WordDetector();
-		wordDetector.parseText("She sells sea shells over the sea shore"); 
+		wordDetector.parseText("Understanding is a three edged sword: your side, their side, and the truth"); 
 
 		then: "word frequency should be correct"
 		wordDetector.wordsFound() > 0
