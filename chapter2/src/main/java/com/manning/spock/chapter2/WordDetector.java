@@ -17,12 +17,21 @@ public class WordDetector {
 	
 	public void parseText(String text)
 	{
+		countPerWord.clear();
+		feedText(text);
+	}
+	
+	public WordDetector feedText(String text)
+	{
 		String[] words = text.split("[\\s,:]"); //Code used only for illustration purposes
 		for(String word:words)
 		{
 			recordCount(word);
 		}
+		return this;
 	}
+	
+	
 	
 	private void recordCount(String word)
 	{

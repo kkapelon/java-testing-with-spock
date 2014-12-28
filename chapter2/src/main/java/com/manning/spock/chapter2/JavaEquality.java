@@ -5,7 +5,7 @@ import java.util.List;
 
 public class JavaEquality {
 	public static void main(String[] args) {
-		String first = "first";
+		String first = "First";
 		String second = "Second";
 		
 		List<String> sample = new ArrayList<>();
@@ -14,6 +14,6 @@ public class JavaEquality {
 		
 		List<String> sample2 = new ArrayList<>(sample);
 		
-		System.out.println("We have "+ (sample == sample2));
+		System.out.println("Result is "+ (sample == sample2));
 	}
 }
