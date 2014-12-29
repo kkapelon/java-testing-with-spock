@@ -27,6 +27,21 @@ class ObjectCreationSpec extends spock.lang.Specification{
 		department.manpowerCount() == 2
 	}
 	
+	def "demo for quick constructors and lists"() {
+		when:
+		
+		List<Employee> people = [
+			new Employee(age:22,firstName:"Alice",lastName:"Olson",inTraining:true),
+			new Employee(middleName:"Jones",lastName:"Corwin",age:45,firstName:"Alex")
+			]
+		
+		Department department = new Department()
+		department.assign(people)
+
+		then:
+		department.manpowerCount() == 2
+	}
+	
 	
 }
 

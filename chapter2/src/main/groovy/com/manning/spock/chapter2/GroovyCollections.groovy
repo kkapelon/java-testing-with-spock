@@ -14,7 +14,7 @@ Map<String,Integer> wordCounts2 = ["Hello":1,"Groovy":1,"World":2]
 
 
 //Creating a map with objects
-Employee person1 = new Employee(firstNamse:"Alice",lastName:"Olson",age:30)
+Employee person1 = new Employee(firstName:"Alice",lastName:"Olson",age:30)
 Employee person2 = new Employee(firstName:"Jones",lastName:"Corwin",age:45)
 
 Address address1 = new Address(street:"Marley",number:25)
@@ -27,3 +27,16 @@ staffAddresses.put(person2, address2);
 Map<Employee,Address> staffAddresses2 = [(person1):address1,(person2):address2]
 
 assert staffAddresses[person2].street == "Barnam"
+
+
+List<String> races = Arrays.asList("Drazi", "Minbari", "Humans")
+
+List<String> races2 = ["Drazi", "Minbari", "Humans"]
+
+assert races == races2
+
+String[] racesArray = ["Drazi", "Minbari", "Humans"]
+
+assert racesArray[0] == "Drazi"
+assert races[0] == "Drazi"
+assert racesArray.size() == races2.size()
