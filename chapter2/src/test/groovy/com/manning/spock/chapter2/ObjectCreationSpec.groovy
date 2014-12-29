@@ -15,13 +15,13 @@ class ObjectCreationSpec extends spock.lang.Specification{
 
 	def "demo for quick constructors"() {
 		when:
-		Employee trainee = new Employee(age:22,firstName:"Alice",lastName:"Olson",inTraining:true);
-		Employee seasoned = new Employee(middleName:"Jones",lastName:"Corwin",age:45,firstName:"Alex");
+		Employee trainee = new Employee(age:22,firstName:"Alice",lastName:"Olson",inTraining:true)
+		Employee seasoned = new Employee(middleName:"Jones",lastName:"Corwin",age:45,firstName:"Alex")
 		
-		List<Employee> people = Arrays.asList(trainee,seasoned);
+		List<Employee> people = Arrays.asList(trainee,seasoned)
 		
-		Department department = new Department();
-		department.assign(people);
+		Department department = new Department()
+		department.assign(people)
 
 		then:
 		department.manpowerCount() == 2
