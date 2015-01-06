@@ -1,0 +1,19 @@
+{
+  "staff": {
+    "department": {
+      "name": "sales",
+      "employee": [
+        {
+          "firstName": "Orlando",
+          "lastName": "Boren",
+          "age": "24"
+        },
+        {
+          "firstName": "Diana",
+          "lastName": "Colgan",
+          "age": "28"
+        }
+      ]
+    }
+  }
+}
