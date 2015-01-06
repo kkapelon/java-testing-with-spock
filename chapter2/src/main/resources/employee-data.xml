@@ -1,0 +1,14 @@
+<staff>
+	<department name="sales">
+		<employee>
+			<firstName>Orlando</firstName>
+			<lastName>Boren</lastName>
+			<age>24</age>
+		</employee>
+		<employee>
+			<firstName>Diana</firstName>
+			<lastName>Colgan</lastName>
+			<age>28</age>
+		</employee>
+	</department>
+</staff>
