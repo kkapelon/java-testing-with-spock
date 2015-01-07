@@ -18,7 +18,7 @@ class ExpandoDemoSpec extends spock.lang.Specification{
 	}
 	
 	def "Testing invalid and valid address detection"() {
-		when: "an address does not have a postcode"
+		when: "two different addresses are checked"
 		Address invalidAddress = new Address(country:"Greece",number:23)
 		Address validAddress = new Address(country:"Greece",number:23,street:"Argous", postCode:"4534")
 		
@@ -27,7 +27,7 @@ class ExpandoDemoSpec extends spock.lang.Specification{
 		
 		Stamper stamper = new Stamper(dummyAddressDao as AddressDao)
 
-		then: "Only address with streetnd postcode are accepted"
+		then: "Only the address with street and postcode is accepted"
 		!stamper.isValid(1)
 		stamper.isValid(2)
 	}

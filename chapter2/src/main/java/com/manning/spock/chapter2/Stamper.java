@@ -14,7 +14,4 @@ public class Stamper {
 		Address address = addressDao.load(addressID);
 		return address.getStreet()!=null && address.getPostCode()!=null;
 	}
-
-	
-	
 }
