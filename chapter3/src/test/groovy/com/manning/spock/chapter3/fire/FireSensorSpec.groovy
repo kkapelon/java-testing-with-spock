@@ -11,9 +11,9 @@ class FireSensorSpec extends spock.lang.Specification{
 		
 		when: "we ask the status of fire control"
 		fireEarlyWarning.feedData(triggeredSensors)
+		WarningStatus status = fireEarlyWarning.getCurrentStatus()
 
 		then: "no alarm/notification should be triggered"
-		WarningStatus status = fireEarlyWarning.getCurrentStatus()
 		!status.alarmActive 
 		!status.fireDepartmentNotified
 	}
@@ -25,9 +25,9 @@ class FireSensorSpec extends spock.lang.Specification{
 		
 		when: "we ask the status of fire control"
 		fireEarlyWarning.feedData(triggeredSensors)
+		WarningStatus status = fireEarlyWarning.getCurrentStatus()
 
 		then: "only the alarm should be triggered"
-		WarningStatus status = fireEarlyWarning.getCurrentStatus()
 		status.alarmActive
 		!status.fireDepartmentNotified
 	}
@@ -39,9 +39,9 @@ class FireSensorSpec extends spock.lang.Specification{
 		
 		when: "we ask the status of fire control"
 		fireEarlyWarning.feedData(triggeredSensors)
+		WarningStatus status = fireEarlyWarning.getCurrentStatus()
 
 		then: "alarm is triggered and the fire department is notified"
-		WarningStatus status = fireEarlyWarning.getCurrentStatus()
 		status.alarmActive
 		status.fireDepartmentNotified
 	}
