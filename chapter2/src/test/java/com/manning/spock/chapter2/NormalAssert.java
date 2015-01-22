@@ -2,13 +2,19 @@ package com.manning.spock.chapter2;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.junit.Test;
 
+/**
+ * Demo of failed assertions with JUnit. This class does not end
+ * in *Test.java so that Maven does not pick it while running unit tests
+ * (otherwise the build would fail)
+ *  
+ * @author Kostis
+ *
+ */
 public class NormalAssert {
 
 	@Test

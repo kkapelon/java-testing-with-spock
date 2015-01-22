@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AssetInventory {
-
 	private List<Ship> ships = new ArrayList<>();
 
 	public List<Ship> getShips() {
@@ -14,8 +13,4 @@ public class AssetInventory {
 	public void setShips(List<Ship> ships) {
 		this.ships = ships;
 	}
-
-	
-
-	
 }
