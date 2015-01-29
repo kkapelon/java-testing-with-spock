@@ -20,7 +20,7 @@ class NuclearReactorSpec extends spock.lang.Specification{
 		status.shutDownNeeded == shutDownOrder
 		status.evacuationMinutes == minutesToEvacuation
 		
-		where:
+		where: "possible nuclear incidents are:"
 		pressure | triggeredFireSensors | radiationSensors || alarmStatus | shutDownOrder | minutesToEvacuation
 		150| 0 | [] || false | false | -1
 		150| 1 | [] || true | false | -1
@@ -29,6 +29,11 @@ class NuclearReactorSpec extends spock.lang.Specification{
 		150| 0 | [45.3f ,10.3f, 47.7f] || false | false | -1
 		155| 0 | [0.0f ,0.0f, 0.0f] || true | false | -1
 		170| 0 | [0.0f ,0.0f, 0.0f] || true | true | 3
+		180| 0 | [110.4f ,0.3f, 0.0f] || true | true | 1
+		500| 0 | [110.4f ,300f, 0.0f] || true | true | 1
+		30 | 0 | [110.4f ,1000f, 0.0f] || true | true | 1
+		155| 4 | [0.0f ,0.0f, 0.0f] || true | true | -1
+		170| 1 | [45.3f ,10.3f, 47.7f] || true | true | 3
 	}
 	
 	
