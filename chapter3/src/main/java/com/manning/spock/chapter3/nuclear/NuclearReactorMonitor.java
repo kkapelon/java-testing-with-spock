@@ -6,7 +6,6 @@ import java.util.List;
 public class NuclearReactorMonitor {
 	private int triggeredFireSensors = 0;
 	private List<Float> radiationStatus = new ArrayList<>();
-	private boolean coolantActive = true;
 	private int currentPressure = 150;
 	
  	public void feedFireSensorData(int triggeredFireSensors)
@@ -19,10 +18,6 @@ public class NuclearReactorMonitor {
 		this.radiationStatus = radiationStatus;
 	}
 	
-	public void feedCoolantStatus(boolean coolantActive)
-	{
-		this.coolantActive = coolantActive;
-	}
 	
 	public void feedPressureInBar(int bar)
 	{
@@ -40,9 +35,9 @@ public class NuclearReactorMonitor {
 				break;
 			}
 		}
-		boolean alarmStatus = (triggeredFireSensors ==1) || !coolantActive | currentPressure > 150 || radiationPresent;
-		boolean shutDownNeeded = (currentPressure> 160) || radiationPresent || (triggeredFireSensors >2 );
-		int evacuationMinutes = 0;
+		boolean alarmStatus = (triggeredFireSensors >0) ||  currentPressure > 150 || radiationPresent;
+		boolean shutDownNeeded = (currentPressure> 160) || radiationPresent || (triggeredFireSensors >1 );
+		int evacuationMinutes = -1;
 		if(radiationPresent)
 		{
 			evacuationMinutes =1;
@@ -51,12 +46,6 @@ public class NuclearReactorMonitor {
 		{
 			evacuationMinutes = 3;
 		}
-		else if(!coolantActive)
-		{
-			evacuationMinutes = 15;
-		}
-		
-		
 		return new NuclearReactorStatus(alarmStatus, shutDownNeeded, evacuationMinutes);
 	}
 }
