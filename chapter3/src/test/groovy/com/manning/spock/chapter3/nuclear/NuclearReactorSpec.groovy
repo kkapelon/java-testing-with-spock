@@ -4,7 +4,6 @@ import spock.lang.*
 
 class NuclearReactorSpec extends spock.lang.Specification{
 	
-	@Unroll
 	def "Complete test of all nuclear scenarios"() {
 		given: "a nuclear reactor and sensor data"
 		NuclearReactorMonitor nuclearReactorMonitor =new NuclearReactorMonitor()
@@ -35,8 +34,6 @@ class NuclearReactorSpec extends spock.lang.Specification{
 		155| 4 | [0.0f ,0.0f, 0.0f] || true | true | -1
 		170| 1 | [45.3f ,10.3f, 47.7f] || true | true | 3
 	}
-	
-	
 	
 }
 
