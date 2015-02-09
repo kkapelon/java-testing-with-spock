@@ -68,7 +68,6 @@ class ImprovedCoolantSensorSpec extends spock.lang.Specification{
 		1 * control.activateAlarm()
 	}
 
-	@Unroll
 	def "Testing of all 3 sensors with temperatures that rize and fall"() {
 		given: "various temperature readings"
 		TemperatureReadings prev =
