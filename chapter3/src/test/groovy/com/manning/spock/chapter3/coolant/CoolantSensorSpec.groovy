@@ -23,7 +23,7 @@ class CoolantSensorSpec extends spock.lang.Specification{
 	}
 	
 	def "If current temperature difference is more than 20 degrees the alarm should sound"() {
-		given: "that temperature readings are within limits"
+		given: "that temperature readings are not within limits"
 		TemperatureReadings prev = new TemperatureReadings(sensor1Data:20,sensor2Data:40,sensor3Data:80)
 		TemperatureReadings current = new TemperatureReadings(sensor1Data:30,sensor2Data:10,sensor3Data:73);
 		TemperatureReader reader = Stub(TemperatureReader)
