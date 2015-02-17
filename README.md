@@ -10,6 +10,10 @@ Current build status: [![Build Status](https://drone.io/github.com/kkapelon/java
 This GIT repository contains all source code for the book [Java Testing With Spock](http://manning.com/kapelonis/) published by Manning.
 Each chapter is offered as an independent Maven project. 
 
+## Free chapter
+You can get an overview of Spock and read a brief discussion on its features in the first
+chapter of the book. This chapter is [freely available](http://manning.com/kapelonis/JTwSpock_MEAP_ch1.pdf) in PDF format.
+
 ## Requirements
 To use the code samples you need the following:
 * Java Development Kit version 7+
