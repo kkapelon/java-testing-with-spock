@@ -24,7 +24,8 @@ To use the code samples you need the following:
 ## Usage
 
 You can checkout/run any chapter on its own. For each chapter entering the command
-**mvn test** will compile and run all JUnit/Spock tests
+**mvn test** will compile and run all JUnit/Spock tests. You can also import a chapter (as a Maven project)
+in your favourite IDE. To gain syntax highlighting you also need to install Groovy support in your IDE.
 
 ## Issues with the code.
 
