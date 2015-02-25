@@ -27,6 +27,23 @@ You can checkout/run any chapter on its own. For each chapter entering the comma
 **mvn test** will compile and run all JUnit/Spock tests. You can also import a chapter (as a Maven project)
 in your favourite IDE. To gain syntax highlighting you also need to install Groovy support in your IDE.
 
+## Code listings
+
+### Chapter 1
+- [Listing 1.1 Sample Spock test](https://github.com/kkapelon/java-testing-with-spock)  FIXME
+- [Listing 1.2 Java class under test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/main/java/com/manning/spock/chapter1/Adder.java)
+- [Listing 1.2 JUnit test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/java/com/manning/spock/chapter1/AdderTest.java)
+- [Listing 1.3 Spock test for the Adder Java class](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/AdderSpec.groovy)
+- [Listing 1.4 JUnit test for two Java classes](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/java/com/manning/spock/chapter1/MultiplierTest.java)
+- [Listing 1.5 Spock test for two Java classes](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/MultiplierSpec.groovy)
+- [Listing 1.6 Introducing an artificial bug in the Java class under test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/main/java/com/manning/spock/chapter1/Multiplier.java)
+- [Listing 1.7 A JUnit test where method names are unrelated to business value](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/java/com/manning/spock/chapter1/BadTest.java)
+- [Listing 1.8 A Spock test where methods explain the business requirements](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/BetterSpec.groovy)
+
+###Chapter 2
+
+###Chapter 3
+
 ## Issues with the code.
 
 If you find a problem with the code feel free to open an [issue](https://github.com/kkapelon/java-testing-with-spock/issues). If you feel
