@@ -1,5 +1,6 @@
 package com.manning.spock.chapter2
 
+import java.util.regex.Pattern
 //This script should run without errors because all asserts evaluate to true
 
 
@@ -11,6 +12,9 @@ assert true && !false
 
 String firstName = "Susan"
 assert firstName
+
+def lastName = "Ivanova"
+assert lastName
 
 String empty = ""
 assert !empty 
@@ -32,6 +36,10 @@ assert array
 
 Object[] emptyArray= new Object[0];
 assert !emptyArray 
+
+Pattern myRegex = ~/needle/
+assert myRegex.matcher("needle in haystack")
+assert !myRegex.matcher("Wrong haystack")
 
 def closure = { number -> number+2 }
 assert closure
