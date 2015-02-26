@@ -41,6 +41,13 @@ in your favourite IDE. To gain syntax highlighting you also need to install Groo
 - [Listing 1.8 A Spock test where methods explain the business requirements](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/BetterSpec.groovy)
 
 ###Chapter 2
+- [Listing 2.1 Groovy class conventions](https://github.com/kkapelon/java-testing-with-spock)
+- [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock)
+- [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock)
+- [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock)
+- [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock)
+- [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock)
+- [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock)
 
 ###Chapter 3
 
