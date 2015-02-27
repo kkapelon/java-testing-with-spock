@@ -83,7 +83,7 @@ like contributing you can even create a pull request!
 
 ## Issues with the book
 If you have comments and suggestions for the book please use the [Manning forum](https://forums.manning.com/forums/java-testing-with-spock).
-I monitor it regularly and it is helpful if other readers can see and respond your comments.
+I monitor it regularly and it is helpful if other readers can see and respond to your comments.
 
 Enjoy!
 

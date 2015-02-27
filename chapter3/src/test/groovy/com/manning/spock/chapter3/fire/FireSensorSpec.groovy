@@ -19,7 +19,7 @@ class FireSensorSpec extends spock.lang.Specification{
 	}
 	
 	def "If one sensor is active the alarm should sound as a precaution"() {
-		given: "that only fire sensor is active"
+		given: "that only one fire sensor is active"
 		FireEarlyWarning fireEarlyWarning =new FireEarlyWarning()
 		int triggeredSensors = 1
 		
@@ -32,8 +32,8 @@ class FireSensorSpec extends spock.lang.Specification{
 		!status.fireDepartmentNotified
 	}
 	
-	def "If more than one sensors are active then we have a fire"() {
-		given: "that two fire sensors is active"
+	def "If more than one sensors is active then we have a fire"() {
+		given: "that two fire sensors are active"
 		FireEarlyWarning fireEarlyWarning =new FireEarlyWarning()
 		int triggeredSensors = 2
 		
