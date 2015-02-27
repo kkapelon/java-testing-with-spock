@@ -45,6 +45,11 @@ public class FireSensorTest {
 				status.isFireDepartmentNotified());
 	}
 
+	/**
+	 * This unit test has multiple assert phases and actually
+	 * tests two scenarios. DO NOT DO this. I show it
+	 * as an anti-pattern.
+	 */
 	@Test
 	public void sensorsAreTriggered() {
 

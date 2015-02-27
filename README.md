@@ -75,6 +75,20 @@ in your favourite IDE. To gain syntax highlighting you also need to install Groo
 
 
 ###Chapter 3
+- [Listing 3.1 A fire control system in Java](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/main/java/com/manning/spock/chapter3/fire/FireEarlyWarning.java) 
+- [Listing 3.1 A fire control system in Java](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/main/java/com/manning/spock/chapter3/fire/WarningStatus.java)  
+- [Listing 3.2 A JUnit test for the fire control system](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/java/com/manning/spock/chapter3/fire/FireSensorTest.java)  
+- [Listing 3.3 JUnit test with complex structure (real example)](https://github.com/xetorthio/jedis/blob/master/src/test/java/redis/clients/jedis/tests/JedisSentinelTest.java)  
+- [Listing 3.4 JUnit test that tests two things - DO NOT DO THIS)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/java/com/manning/spock/chapter3/fire/FireSensorTest.java)  
+- [Listing 3.5 The full Spock test for the fire control system)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/groovy/com/manning/spock/chapter3/fire/FireSensorSpec.groovy)  
+- [Listing 3.6 Testing the nuclear reactor scenarios with JUnit)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/java/com/manning/spock/chapter3/nuclear/NuclearReactorTest.java)  
+- [Listing 3.7 Testing the nuclear reactor scenarios with Spock)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/groovy/com/manning/spock/chapter3/nuclear/NuclearReactorSpec.groovy)  
+- [Listing 3.8 Java classes for the temperature monitor and reader)](https://github.com/kkapelon/java-testing-with-spock/tree/master/chapter3/src/main/java/com/manning/spock/chapter3/coolant)  
+- [Listing 3.9 Stubbing with Spock)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/groovy/com/manning/spock/chapter3/coolant/CoolantSensorSpec.groovy)  
+- [Listing 3.10 Java classes for the temperature monitor, reader and reactor control)](https://github.com/kkapelon/java-testing-with-spock/tree/master/chapter3/src/main/java/com/manning/spock/chapter3/coolant2)  
+- [Listing 3.11 Mocking and Stubbing with Spock)](https://github.com/kkapelon/java-testing-with-spock/tree/master/chapter3/src/test/groovy/com/manning/spock/chapter3/coolant2)  
+- [Listing 3.12 Mocking and Stubbing with JUnit and Mockito)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/java/com/manning/spock/chapter3/coolant/CoolantSensorTest.java)  
+- [Listing 3.13 Mocking/Stubbing in a Spock parameterized test)](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/groovy/com/manning/spock/chapter3/coolant2/ImprovedCoolantSensorSpec.groovy)  
 
 ## Issues with the code.
 
