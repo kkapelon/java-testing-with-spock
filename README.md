@@ -25,8 +25,14 @@ To use the code samples you need the following:
 
 You can checkout/run any chapter on its own. You can either [work directly on Github](https://help.github.com/) or
 [download the code as a ZIP file](https://github.com/kkapelon/java-testing-with-spock/archive/master.zip) For each chapter entering the command
-**mvn test** will compile and run all JUnit/Spock tests. You can also import a chapter (as a Maven project)
-in your favourite IDE. To gain syntax highlighting you also need to install Groovy support in your IDE.
+**mvn test** will compile and run all JUnit/Spock tests. 
+
+## IDE support
+Each chapter is self-contained. There is no super POM file. This repository is NOT a multimodule project.
+If you use Eclipse just import any chapter as a Maven project. If you use IntelliJ make sure that
+you import each chapter on its own project (and not as modules in a single project).
+To gain syntax highlighting you also need to install Groovy support in your IDE. This is optional
+because the build is fully automated via Maven.
 
 ## Code listings
 
