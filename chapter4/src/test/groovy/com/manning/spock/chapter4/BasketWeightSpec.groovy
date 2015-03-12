@@ -43,22 +43,10 @@ class BasketWeightSpec extends spock.lang.Specification{
 
 		then: "basket weight is equal to both camera and tv"
 		basket.currentWeight == (tv.weight + camera.weight)
+//		basket.currentWeight = (tv.weight + camera.weight) uncomment line to create a bug
 	}
 	
-	def "A basket with two products weights as their sum (alternative)"() {
-		setup: "an empty basket, a TV and a camera"
-		Product tv = new Product(name:"bravia",price:1200,weight:18)
-		Product camera = new Product(name:"panasonic",price:350,weight:2)
-		@Subject
-		Basket basket = new Basket()
-		
-		when: "user wants to buy the TV and the camera"
-		basket.addProduct tv
-		basket.addProduct camera
-
-		then: "basket weight is equal to both camera and tv"
-		basket.currentWeight == (tv.weight + camera.weight)
-	}
+	
 	
 	def "A basket with two products weights as their sum (precondition)"() {
 		given: "an empty basket, a TV and a camera"
@@ -96,8 +84,7 @@ class BasketWeightSpec extends spock.lang.Specification{
 	}
 	
 	def "A basket with three products weights as their sum"() {
-		given: "an empty basket, a TV,a camera and a hifi"
-		@Subject
+		given: "an empty basket"
 		Basket basket = new Basket()
 		
 		and: "several products"
@@ -116,7 +103,6 @@ class BasketWeightSpec extends spock.lang.Specification{
 	
 	def "A basket with three products weights as their sum (alternate)"() {
 		given: "an empty basket, a TV,a camera and a hifi"
-		@Subject
 		Basket basket = new Basket()
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
@@ -137,7 +123,6 @@ class BasketWeightSpec extends spock.lang.Specification{
 	
 	def "A basket with three products has correct weight and count (controversial)"() {
 		given: "an empty basket, a TV,a camera and a hifi"
-		@Subject
 		Basket basket = new Basket()
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
