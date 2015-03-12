@@ -35,12 +35,11 @@ class BasketWeightSpec extends spock.lang.Specification{
 		given: "an empty basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
-		@Subject
 		Basket basket = new Basket()
 		
 		when: "user wants to buy the TV and the camera"
-		basket.addProduct tv
-		basket.addProduct camera
+		basket.addProduct(tv)
+		basket.addProduct(camera)
 
 		then: "basket weight is equal to both camera and tv"
 		basket.currentWeight == (tv.weight + camera.weight)
