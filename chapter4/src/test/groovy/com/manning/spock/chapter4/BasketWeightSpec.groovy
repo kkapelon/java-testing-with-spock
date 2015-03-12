@@ -18,6 +18,18 @@ class BasketWeightSpec extends spock.lang.Specification{
 		basket.currentWeight == tv.weight
 	}
 	
+	def "A basket with one product has equal weight (alternative)"() {
+		setup: "an empty basket and a TV"
+		Product tv = new Product(name:"bravia",price:1200,weight:18)
+		Basket basket = new Basket()
+		
+		when: "user wants to buy the TV"
+		basket.addProduct(tv)
+
+		then: "basket weight is equal to the TV"
+		basket.currentWeight == tv.weight
+	}
+	
 	
 	def "A basket with two products weights as their sum"() {
 		given: "an empty basket, a TV and a camera"
