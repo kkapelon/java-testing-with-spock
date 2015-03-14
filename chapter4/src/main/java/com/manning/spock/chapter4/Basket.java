@@ -1,6 +1,5 @@
 package com.manning.spock.chapter4;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -12,6 +11,7 @@ public class Basket {
 	public void clearAllProducts()
 	{
 		contents.clear();
+//		System.out.println("Contents are cleared");
 	}
 	
 	public void addProduct(Product product)

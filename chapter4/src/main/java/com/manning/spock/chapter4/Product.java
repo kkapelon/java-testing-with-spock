@@ -1,6 +1,5 @@
 package com.manning.spock.chapter4;
 
-import java.math.BigDecimal;
 
 public class Product {
 	private String name;
