@@ -6,12 +6,12 @@ import java.util.Map.Entry;
 
 public class Basket {
 
-	private Map<Product,Integer> contents = new HashMap<>();
+	protected Map<Product,Integer> contents = new HashMap<>();
 	
 	public void clearAllProducts()
 	{
 		contents.clear();
-//		System.out.println("Contents are cleared");
+//		System.out.println("Basked contents are cleared");
 	}
 	
 	public void addProduct(Product product)
@@ -47,4 +47,7 @@ public class Basket {
 	{
 		return contents.size();
 	}
+	
+	
+	
 }
