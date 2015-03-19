@@ -7,7 +7,7 @@ import spock.lang.*
 
 
 class BetterSpec extends spock.lang.Specification{
-	def "Client should have a bonus if he spents more than 100 dollars"() {
+	def "Client should have a bonus if he spends more than 100 dollars"() {
 		when: "a client buys something with value at least 100"
 		def client = new Client();
 		def billing = new CreditCardBilling();
