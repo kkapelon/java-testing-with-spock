@@ -27,7 +27,7 @@ class CommonCleanupSpec extends spock.lang.Specification{
 	}
 
 	def "A basket with two products weights as their sum"() {
-		when: "user wants to buy the TV and the camera and the hifi"
+		when: "user wants to buy the TV and the camera"
 		basket.addProduct tv
 		basket.addProduct camera
 

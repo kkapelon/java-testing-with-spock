@@ -31,14 +31,12 @@ class CommonSetupSpec extends spock.lang.Specification{
 		given: "an empty basket"
 		Basket basket = new Basket()
 
-		when: "user wants to buy the TV and the camera and the hifi"
+		when: "user wants to buy the TV and the camera"
 		basket.addProduct tv
 		basket.addProduct camera
 
 		then: "basket weight is equal to all product weight"
 		basket.currentWeight == (tv.weight + camera.weight)
 	}
-	
-	
 }
 
