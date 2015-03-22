@@ -5,7 +5,7 @@ import spock.lang.*
 import com.manning.spock.chapter4.Basket
 import com.manning.spock.chapter4.Product
 
-@Narrative("""" A empty basket start with no weight. Adding products to the basket
+@Narrative(""" A empty basket start with no weight. Adding products to the basket
 increases its weight. The weight is then used for billing during shipping calculations.
 Electronic goods have always 0 zero weight.
 """)
