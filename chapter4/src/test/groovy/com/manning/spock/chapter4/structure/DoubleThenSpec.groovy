@@ -7,7 +7,7 @@ import com.manning.spock.chapter4.Product
 
 class DoubleThenSpec extends spock.lang.Specification{
 
-	def "Adding product to a basket increases its weight"() {
+	def "Adding products to a basket increases its weight"() {
 		given: "an empty basket"
 		Basket basket = new Basket()
 		

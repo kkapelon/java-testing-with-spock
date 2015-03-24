@@ -1,7 +1,5 @@
 package com.manning.spock.chapter4.lifecycle
 
-import lifecycle.BillableBasket
-import lifecycle.CreditCardProcessor
 import spock.lang.*
 
 import com.manning.spock.chapter4.Product
