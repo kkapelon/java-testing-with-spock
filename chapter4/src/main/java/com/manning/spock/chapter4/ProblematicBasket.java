@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class Basket {
+public class ProblematicBasket {
 
 	protected Map<Product,Integer> contents = new HashMap<>();
 	
@@ -20,14 +20,15 @@ public class Basket {
 	
 	public void addProduct(Product product, int times)
 	{
+		//Bug always add one product regardless of times
 		if(contents.containsKey(product))
 		{
 			int existing = contents.get(product);
-			contents.put(product,existing+times);
+			contents.put(product,existing);
 		}
 		else
 		{
-			contents.put(product,times);
+			contents.put(product,1);
 		}
 	}
 	
@@ -46,5 +47,24 @@ public class Basket {
 	{
 		return contents.size();
 	}
+	
+	@Override
+	public String toString()
+	{
+		StringBuilder builder = new StringBuilder("[ ");
+		for (Entry<Product, Integer> entry:contents.entrySet())
+		{
+			builder.append(entry.getValue());
+			builder.append(" x ");
+			builder.append(entry.getKey().getName());
+			builder.append(", ");
+		}
+		builder.setLength(builder.length()-2);
+		
+		return builder.append(" ]").toString();
+	}
+	
+	
+	
 	
 }
