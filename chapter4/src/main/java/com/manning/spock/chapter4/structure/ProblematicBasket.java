@@ -1,8 +1,10 @@
-package com.manning.spock.chapter4;
+package com.manning.spock.chapter4.structure;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.manning.spock.chapter4.Product;
 
 public class ProblematicBasket {
 

@@ -3,7 +3,6 @@ package com.manning.spock.chapter4.structure
 import spock.lang.*
 
 import com.manning.spock.chapter4.Basket
-import com.manning.spock.chapter4.ProblematicBasket;
 import com.manning.spock.chapter4.Product
 
 class FailureRenderingSpec extends spock.lang.Specification{
