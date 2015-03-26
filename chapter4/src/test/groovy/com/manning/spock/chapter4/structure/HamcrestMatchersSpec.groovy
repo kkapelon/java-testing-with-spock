@@ -9,50 +9,42 @@ import spock.lang.*
 
 class HamcrestMatchersSpec extends spock.lang.Specification{
 
-	def "trivial test with Groovy closure"() {
-		given: "a list of products"
-		List<String> products= ["camera", "laptop","hifi"]
-
-		expect: "camera should be one of them"
-		products.any{ productName -> productName == "camera"}
-		
-		and: "hotdog is not one of them"
-		products.every{ productName -> productName != "hotdog"}
-	}
-	
 	def "trivial test with Hamcrest"() {
 		given: "a list of products"
-		List<String> products= ["camera", "laptop","hifi"]
+		List<String> products= ["camera", "laptop", "hifi"]
 
 		expect: "camera should be one of them"
-		that(products, hasItem("camera"))
 		products hasItem("camera")
-		
+
 		and: "hotdog is not one of them"
-		that(products, not(hasItem("hotdog")))
 		products not(hasItem("hotdog"))
 	}
-	
+
 	def "trivial test with Hamcrest (alt)"() {
 		given: "an empty list"
 		List<String> products= new ArrayList<String>()
-		
+
 		when: "it is filled with products"
 		products.add("laptop")
 		products.add("camera")
 		products.add("hifi")
-		
 
 		then: "camera should be one of them"
 		expect(products, hasItem("camera"))
-		products hasItem("camera")
-		
+
 		and: "hotdog is not one of them"
 		that(products, not(hasItem("hotdog")))
-		products not(hasItem("hotdog"))
 	}
-	
-	
 
+	def "trivial test with Groovy closure"() {
+		given: "a list of products"
+		List<String> products= ["camera", "laptop", "hifi"]
+
+		expect: "camera should be one of them"
+		products.any{ productName -> productName == "camera"}
+
+		and: "hotdog is not one of them"
+		products.every{ productName -> productName != "hotdog"}
+	}
 }
 
