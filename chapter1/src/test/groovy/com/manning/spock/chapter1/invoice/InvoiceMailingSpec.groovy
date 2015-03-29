@@ -11,7 +11,7 @@ import com.manning.spock.invoice.PrinterService
 class InvoiceMailingSpec extends spock.lang.Specification{ 
  
 	def "electronic invoices to active email addresses"() { 
-		given:
+		given:"an invoice, a customer, a mail server and a printer"
 		PrinterService printerService = Mock(PrinterService) 
 		EmailService emailService = Mock(EmailService)
 		Customer customer = new Customer()

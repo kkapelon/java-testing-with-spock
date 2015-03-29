@@ -37,7 +37,7 @@ because the build is fully automated via Maven.
 ## Code listings
 
 ### Chapter 1
-- [Listing 1.1 Sample Spock test](https://github.com/kkapelon/java-testing-with-spock)  FIXME
+- [Listing 1.1 Sample Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/invoice/InvoiceMailingSpec.groovy)  
 - [Listing 1.2 Java class under test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/main/java/com/manning/spock/chapter1/Adder.java)
 - [Listing 1.2 JUnit test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/java/com/manning/spock/chapter1/AdderTest.java)
 - [Listing 1.3 Spock test for the Adder Java class](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/AdderSpec.groovy)
