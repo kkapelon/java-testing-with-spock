@@ -1,10 +1,10 @@
-package com.manning.spock.chapter5
+package com.manning.spock.chapter5.intro
 
 import java.awt.image.ImageFilter;
 
 import spock.lang.*
 
-
+@Unroll
 class ImageNameValidatorSpec extends spock.lang.Specification{
 
 	def "Valid images are PNG and JPEG files"() {
@@ -18,7 +18,7 @@ class ImageNameValidatorSpec extends spock.lang.Specification{
 		pictureFile        || validPicture
 		"scenery.jpg"      || true
 		"house.jpeg"       || true
-		"car.png "         || false
+		"car.png"          || true
 		"sky.tiff"         || false
 		"dance_bunny.gif"  || false
 	}

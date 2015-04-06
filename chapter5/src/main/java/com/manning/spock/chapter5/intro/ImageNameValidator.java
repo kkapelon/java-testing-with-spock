@@ -1,4 +1,4 @@
-package com.manning.spock.chapter5;
+package com.manning.spock.chapter5.intro;
 
 import java.util.Locale;
 
