@@ -25,7 +25,7 @@ class BetterSpec extends spock.lang.Specification{
 		client.rejectsCharge();
 
 		then: "Client should have the bonus option inactive"
-		client.hasBonus() == false
+		client.hasBonus() != false 
 		
 	}
 }
