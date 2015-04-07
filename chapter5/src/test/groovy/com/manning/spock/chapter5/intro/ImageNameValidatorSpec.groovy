@@ -4,7 +4,6 @@ import java.awt.image.ImageFilter;
 
 import spock.lang.*
 
-@Unroll
 class ImageNameValidatorSpec extends spock.lang.Specification{
 
 	def "Valid images are PNG and JPEG files"() {
