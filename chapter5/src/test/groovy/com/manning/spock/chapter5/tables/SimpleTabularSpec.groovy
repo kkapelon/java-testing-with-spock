@@ -13,7 +13,7 @@ class SimpleTabularSpec extends spock.lang.Specification{
 		expect: "that it calculates the sum of two numbers"
 		adder.add(first,second)==sum
 
-		where: "sample image names are"
+		where: "some scenarios are"
 		first   |second     || sum
 		1       | 1         || 2
 		3       | 2         || 5
@@ -29,7 +29,7 @@ class SimpleTabularSpec extends spock.lang.Specification{
 		expect: "that it calculates the sum of two numbers"
 		adder.add(first,second)==sum
 
-		where: "sample image names are"
+		where: "some scenarios are"
 		first   |second     || sum
 		1       | 1         || 2
 		3       | 2         || 5

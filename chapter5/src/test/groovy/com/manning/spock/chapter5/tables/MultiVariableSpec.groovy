@@ -14,7 +14,7 @@ class MultiVariableSpec extends spock.lang.Specification{
 		calc.add(first,second)==sum
 		calc.multiply(first,second)==product
 
-		where: "sample image names are"
+		where: "some scenarios are"
 		first   |second     || sum  | product
 		1       | 1         || 2    | 1
 		3       | 2         || 5    | 6
