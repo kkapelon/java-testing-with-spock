@@ -9,15 +9,15 @@ class LifecycleDataSpec extends spock.lang.Specification{
 	def "Trivial adder test"() {
 		given: "an adder"
 		Adder adder = new Adder()
-		println "Given: block runs"
+//		println "Given: block runs"
 		
 		when:"the add method is called for two numbers"
 		int result = adder.add(first,second)
-		println "When: block runs for $first and $second"
+//		println "When: block runs for $first and $second"
 
 		then: "the result should be the sum of them"
 		result ==sum
-		println "Then: block is evaluated for $sum"
+//		println "Then: block is evaluated for $sum"
 
 		where: "some scenarios are"
 		first   |second     || sum
