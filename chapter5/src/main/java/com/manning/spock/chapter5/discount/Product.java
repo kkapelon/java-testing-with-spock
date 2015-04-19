@@ -1,4 +1,4 @@
-package com.manning.spock.chapter5.intro;
+package com.manning.spock.chapter5.discount;
 
 public class Product {
 
