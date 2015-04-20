@@ -7,11 +7,11 @@ import spock.lang.*
 class UnrollDataSpec extends spock.lang.Specification{
 
 	@Unroll
-	def "Trivial adder test (alt)"() {
+	def "Trivial adder test"() {
 		given: "an adder"
 		Adder adder = new Adder()
 		
-		when:"the add method is called for two numbers"
+		when: "the add method is called for two numbers"
 		int result = adder.add(first,second)
 
 		then: "the result should be the sum of them"
@@ -25,11 +25,11 @@ class UnrollDataSpec extends spock.lang.Specification{
 	}
 	
 	@Unroll("Adder test #first, #second and  #sum (alt2)")
-	def "Trivial adder test (alt3)"() {
+	def "Trivial adder test (alt2)"() {
 		given: "an adder"
 		Adder adder = new Adder()
 		
-		when:"the add method is called for two numbers"
+		when: "the add method is called for two numbers"
 		int result = adder.add(first,second)
 
 		then: "the result should be the sum of them"
@@ -47,7 +47,7 @@ class UnrollDataSpec extends spock.lang.Specification{
 		given: "an adder"
 		Adder adder = new Adder()
 		
-		when:"the add method is called for two numbers"
+		when: "the add method is called for two numbers"
 		int result = adder.add(first,second)
 
 		then: "the result should be the sum of them"
