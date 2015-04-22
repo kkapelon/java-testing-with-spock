@@ -24,7 +24,7 @@ class UnrollDataSpec extends spock.lang.Specification{
 		3       | -3        || 0
 	}
 	
-	@Unroll("Adder test #first, #second and  #sum (alt2)")
+	@Unroll("Testing the Adder for #first + #second = #sum")
 	def "Trivial adder test (alt2)"() {
 		given: "an adder"
 		Adder adder = new Adder()
@@ -43,7 +43,7 @@ class UnrollDataSpec extends spock.lang.Specification{
 	}
 	
 	@Unroll
-	def "Adder test #first + #second = #sum (alt3)"() {
+	def "Testing the Adder for #first + #second = #sum "() {
 		given: "an adder"
 		Adder adder = new Adder()
 		
