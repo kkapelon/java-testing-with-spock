@@ -1,0 +1,10 @@
+#Found by QA
+starsystem.tiff
+galaxy.tif
+
+#Reported by client
+
+  bunny04.gif
+  looper.GIF
+  dolly_take.mov
+  afar.xpm

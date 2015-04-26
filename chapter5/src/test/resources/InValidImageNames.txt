@@ -1,6 +1,0 @@
-starsystem.tiff
-galaxy.tif
-bunny04.gif
-looper.GIF
-dolly_take.mov
-afar.xpm
