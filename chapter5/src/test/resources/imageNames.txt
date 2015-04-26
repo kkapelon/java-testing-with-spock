@@ -1,0 +1,12 @@
+#Found by QA
+starsystem.tiff fail
+galaxy.tif fail
+desktop.png pass
+europe.jpg pass
+
+#Reported by client
+
+  bunny04.gif fail
+  looper.GIF fail
+  dolly_take.mov fail
+  afar.xpm fail
