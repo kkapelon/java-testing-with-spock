@@ -15,11 +15,12 @@ class CombinationsSpec extends spock.lang.Specification{
 		Adder adder = new Adder()
 
 		expect: "that it calculates the sum of two numbers"
-		adder.add(first,second) > 0
+		adder.add(first,second) == sum
 
 		where: "some scenarios are"
-		first << [14,45,78]
-		second << [56,76,180]
+		first <<  [3, 10, 20]
+		second << [2, 4,  50]
+		sum <<    [5, 14, 70]
 	}
 	
 	def "Multipling #first and #second is always a negative number"() {
