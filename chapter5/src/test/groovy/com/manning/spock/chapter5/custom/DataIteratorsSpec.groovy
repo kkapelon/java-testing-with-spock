@@ -12,6 +12,7 @@ class DataIteratorsSpec extends spock.lang.Specification{
 		ImageNameValidator validator = new ImageNameValidator()
 
 
+		expect: "that all filenames are rejected"
 		!validator.isValidImageExtension(pictureFile)
 
 		where: "sample image names are"
