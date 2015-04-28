@@ -23,6 +23,20 @@ class CombinationsSpec extends spock.lang.Specification{
 		sum <<    [2, 5, 98,  0, 0]
 	}
 	
+	def "Valid images are PNG and JPEG files only"() {
+		given: "an image extension checker"
+		ImageNameValidator validator = new ImageNameValidator() 
+	
+		expect: "that only valid filenames are accepted"
+		validator.isValidImageExtension(pictureFile) == validPicture 
+	
+		where: "sample image names are" 
+		pictureFile  << ["scenery.jpg","house.jpeg", "car.png ","sky.tiff" ,"dance_bunny.gif" ]
+		validPicture << [ true, true, false, false, false]
+	}
+	
+	
+	
 	def "Multipling #first and #second is always a negative number"() {
 		given: "a calculator"
 		Calculator calc = new Calculator()
