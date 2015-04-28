@@ -18,9 +18,9 @@ class CombinationsSpec extends spock.lang.Specification{
 		adder.add(first,second) == sum
 
 		where: "some scenarios are"
-		first <<  [3, 10, 20]
-		second << [2, 4,  50]
-		sum <<    [5, 14, 70]
+		first <<  [1, 3, 82,  3, 0]
+		second << [1, 2, 16, -3, 0]
+		sum <<    [2, 5, 98,  0, 0]
 	}
 	
 	def "Multipling #first and #second is always a negative number"() {
