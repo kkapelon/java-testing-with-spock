@@ -45,8 +45,8 @@ class BasicPipesSpec extends spock.lang.Specification{
 		calc.multiply(first,second) < 0
 
 		where: "some scenarios are"
-		first << (20..30)
-		second << (-18..-8)
+		first << (20..80)
+		second << (-65..-5)
 	}
 	
 	@Unroll("Checking image name #pictureFile")
