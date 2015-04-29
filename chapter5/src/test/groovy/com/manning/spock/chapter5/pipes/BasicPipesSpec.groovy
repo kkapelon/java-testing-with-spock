@@ -7,7 +7,7 @@ import com.manning.spock.chapter5.tables.Adder
 import com.manning.spock.chapter5.tables.Calculator
 
 @Unroll
-class CombinationsSpec extends spock.lang.Specification{
+class BasicPipesSpec extends spock.lang.Specification{
 
 	
 	def "Adding two positive numbers results in a positive number as well"() {
