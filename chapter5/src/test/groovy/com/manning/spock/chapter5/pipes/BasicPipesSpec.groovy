@@ -10,7 +10,7 @@ import com.manning.spock.chapter5.tables.Calculator
 class BasicPipesSpec extends spock.lang.Specification{
 
 	
-	def "Adding two positive numbers results in a positive number as well"() {
+	def "Trivial adder test"() {
 		given: "an adder"
 		Adder adder = new Adder()
 
@@ -41,7 +41,7 @@ class BasicPipesSpec extends spock.lang.Specification{
 		given: "a calculator"
 		Calculator calc = new Calculator()
 
-		expect: "that multiplying a positive and negative number results in a negative number"
+		expect: "that multiplying a positive and negative number is also negative"
 		calc.multiply(first,second) < 0
 
 		where: "some scenarios are"
