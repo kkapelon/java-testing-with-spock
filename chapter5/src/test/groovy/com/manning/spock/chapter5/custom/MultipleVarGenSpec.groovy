@@ -4,7 +4,7 @@ import spock.lang.*
 
 import com.manning.spock.chapter5.intro.ImageNameValidator
 
-class MultipleVarSpec extends spock.lang.Specification{
+class MultipleVarGenSpec extends spock.lang.Specification{
 
 	
 	@Unroll("Checking harcoded image name #pictureFile with #result")
