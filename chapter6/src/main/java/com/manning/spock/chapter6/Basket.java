@@ -4,12 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.manning.spock.chapter6.stubs.ShippingCalculator;
 import com.manning.spock.chapter6.stubs.WarehouseInventory;
 
 public class Basket {
 
 	private WarehouseInventory warehouseInventory;
-
+private ShippingCalculator shippingCalculator;
+	
 	protected Map<Product, Integer> contents = new HashMap<>();
 
 	public void clearAllProducts() {
@@ -61,4 +63,22 @@ public class Basket {
 		}
 	}
 
+	public int findTotalCost()
+	{
+		int sum = 0;
+		for (Entry<Product, Integer> entry : contents.entrySet()) {
+			int count = entry.getValue();
+			int price = entry.getKey().getPrice();
+			sum = sum + (count * price);
+			
+			int shipping = shippingCalculator.findShippingCostFor(entry.getKey(), count);
+			sum = sum + shipping;
+		}
+		return sum;
+	}
+	public void setShippingCalculator(ShippingCalculator shippingCalculator) {
+		this.shippingCalculator = shippingCalculator;
+	}
+
+	
 }
