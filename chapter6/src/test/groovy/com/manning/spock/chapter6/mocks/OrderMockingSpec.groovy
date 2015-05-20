@@ -6,31 +6,15 @@ import com.manning.spock.chapter6.Basket
 import com.manning.spock.chapter6.Product
 import com.manning.spock.chapter6.stubs.WarehouseInventory
 
-class SimpleMockingSpec extends spock.lang.Specification{
+@Subject(BillableBasket.class)
+class OrderMockingSpec extends spock.lang.Specification{
 
-	def "If warehouse is empty nothing can be shipped"() {
-		given: "an basket and a TV"
-		Product tv = new Product(name:"bravia",price:1200,weight:18)
-		Basket basket = new Basket()
-		
-		and:"an empty warehouse"
-		WarehouseInventory inventory = Mock(WarehouseInventory)
-		inventory.isEmpty() >> true
-		basket.setWarehouseInventory(inventory)
-
-		when: "user checks out the tv"
-		basket.addProduct tv
-
-		then: "order cannot be shipped"
-		!basket.canShipCompletely()
-	}
-	
-	def "credit card connection is closed down"() {
+	def "credit card connection is closed down in the end"() {
 		given: "an basket, a customer and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		BillableBasket basket = new BillableBasket()
 		Customer customer = new Customer(name:"John",vip:false,creditCard:"testCard")
-		
+
 		and:"a credit card service"
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
@@ -39,12 +23,31 @@ class SimpleMockingSpec extends spock.lang.Specification{
 		basket.addProduct tv
 		basket.checkout(customer)
 
-		then: "connection is always closed at the end"
+		then: "credit card is charged"
+		1 * creditCardSevice.sale(1200,customer)
 		1 * creditCardSevice.shutdown()
 	}
-	
 
-	
-	
+
+	def "credit card connection is closed down in the end (alt)"() {
+		given: "an basket, a customer and a TV"
+		Product tv = new Product(name:"bravia",price:1200,weight:18)
+		BillableBasket basket = new BillableBasket()
+		Customer customer = new Customer(name:"John",vip:false,creditCard:"testCard")
+
+		and:"a credit card service"
+		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
+		basket.setCreditCardProcessor(creditCardSevice)
+
+		when: "user checks out the tv"
+		basket.addProduct tv
+		basket.checkout(customer)
+
+		then: "credit card is charged"
+		1 * creditCardSevice.sale( _, _)
+
+		then: "credit card is charged"
+		1 * creditCardSevice.shutdown()
+	}
 }
 

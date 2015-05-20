@@ -15,7 +15,6 @@ public class BillableBasket extends Basket{
 	
 	public void checkout(Customer customer)
 	{
-		creditCardProcessor.connect();
 		creditCardProcessor.sale(findOrderPrice(), customer);
 		creditCardProcessor.shutdown();
 	}
