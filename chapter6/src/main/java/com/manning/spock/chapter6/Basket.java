@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.manning.spock.chapter6.mocks.CreditCardProcessor;
 import com.manning.spock.chapter6.stubs.ShippingCalculator;
 import com.manning.spock.chapter6.stubs.WarehouseInventory;
 
@@ -80,5 +81,5 @@ public class Basket {
 	public void setShippingCalculator(ShippingCalculator shippingCalculator) {
 		this.shippingCalculator = shippingCalculator;
 	}
-
+	
 }
