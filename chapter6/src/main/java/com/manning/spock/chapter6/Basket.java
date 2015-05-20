@@ -10,8 +10,8 @@ import com.manning.spock.chapter6.stubs.WarehouseInventory;
 public class Basket {
 
 	private WarehouseInventory warehouseInventory;
-private ShippingCalculator shippingCalculator;
-	
+	private ShippingCalculator shippingCalculator;
+
 	protected Map<Product, Integer> contents = new HashMap<>();
 
 	public void clearAllProducts() {
@@ -63,22 +63,22 @@ private ShippingCalculator shippingCalculator;
 		}
 	}
 
-	public int findTotalCost()
-	{
+	public int findTotalCost() {
 		int sum = 0;
 		for (Entry<Product, Integer> entry : contents.entrySet()) {
 			int count = entry.getValue();
 			int price = entry.getKey().getPrice();
 			sum = sum + (count * price);
-			
-			int shipping = shippingCalculator.findShippingCostFor(entry.getKey(), count);
+
+			int shipping = shippingCalculator.findShippingCostFor(
+					entry.getKey(), count);
 			sum = sum + shipping;
 		}
 		return sum;
 	}
+
 	public void setShippingCalculator(ShippingCalculator shippingCalculator) {
 		this.shippingCalculator = shippingCalculator;
 	}
 
-	
 }
