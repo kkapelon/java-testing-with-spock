@@ -1,5 +1,6 @@
 package com.manning.spock.chapter6.mocks;
 
+import java.util.Date;
 import java.util.Map.Entry;
 
 import com.manning.spock.chapter6.Basket;
@@ -28,4 +29,27 @@ public class BillableBasket extends Basket{
 		}
 		return sum;
 	}
+	
+	public boolean fullCheckout(Customer customer)
+	{
+		CreditCardResult auth = creditCardProcessor.authorize(findOrderPrice(), customer);
+		if(auth == CreditCardResult.INVALID_CARD || auth == CreditCardResult.NO_ENOUGH_FUNDS )
+		{
+			return false;
+		}
+		boolean canShip = canShipCompletely();
+		if(!canShip)
+		{
+			return false;
+		}
+		CreditCardResult capture = creditCardProcessor.capture(new Date().toString()+auth.getToken(), customer);
+		if(capture == CreditCardResult.INVALID_CARD)
+		{
+			return false;
+		}
+		return true;
+	
+	}
+	
+	
 }
