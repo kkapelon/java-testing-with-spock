@@ -58,7 +58,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		basket.addProduct tv
 		basket.addProduct camera
 
-		then: "order cannoot be shipped right away"
+		then: "order cannot be shipped right away"
 		!basket.canShipCompletely()
 	}
 	
