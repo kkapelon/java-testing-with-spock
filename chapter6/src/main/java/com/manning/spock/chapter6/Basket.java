@@ -50,6 +50,10 @@ public class Basket {
 	}
 
 	public boolean canShipCompletely() {
+		if(warehouseInventory.isEmpty())
+		{
+			return false;
+		}
 		try {
 			for (Entry<Product, Integer> entry : contents.entrySet()) {
 				boolean ok = warehouseInventory.availableOfProduct(entry

@@ -37,6 +37,7 @@ class HelperMockingMethodSpec extends spock.lang.Specification{
 	def myHelperMethod(WarehouseInventory inventory, Basket basket) {
 		basket.getProductTypesCount() == 2
 		2 * inventory.availableOfProduct( _ , _) >> true
+		_ * inventory.isEmpty() >> false
 		0 * _
 	}
 }
