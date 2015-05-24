@@ -62,6 +62,27 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		!basket.canShipCompletely()
 	}
 	
+	def "If warehouse has not all products, order cannot be shipped (alt)"() {
+		given: "an basket, a TV and a camera"
+		Product tv = new Product(name:"bravia",price:1200,weight:18)
+		Product camera = new Product(name:"panasonic",price:350,weight:2)
+		Basket basket = new Basket()
+		
+		and:"a warehouse with partial availability"
+		WarehouseInventory inventory = Stub(WarehouseInventory) {
+			availableOfProduct("bravia",1) >> true
+			availableOfProduct("panasonic",1) >> false
+		}
+		basket.setWarehouseInventory(inventory)
+
+		when: "user checks out both products"
+		basket.addProduct tv
+		basket.addProduct camera
+
+		then: "order cannot be shipped right away"
+		!basket.canShipCompletely()
+	}
+	
 	
 }
 
