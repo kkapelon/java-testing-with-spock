@@ -9,7 +9,7 @@ import com.manning.spock.chapter6.Product
 class SimpleStubbingSpec extends spock.lang.Specification{
 
 	def "If warehouse is empty nothing can be shipped"() {
-		given: "an basket and a TV"
+		given: "a basket and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Basket basket = new Basket()
 		
@@ -26,7 +26,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 	}
 	
 	def "If warehouse has the product on stock everything is fine"() {
-		given: "an basket and a TV"
+		given: "a basket and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Basket basket = new Basket()
 		
@@ -43,7 +43,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 	}
 	
 	def "If warehouse has not all products, order cannot be shipped"() {
-		given: "an basket, a TV and a camera"
+		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
@@ -63,7 +63,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 	}
 	
 	def "If warehouse has not all products, order cannot be shipped (alt)"() {
-		given: "an basket, a TV and a camera"
+		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
@@ -73,7 +73,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 			availableOfProduct("bravia",1) >> true
 			availableOfProduct("panasonic",1) >> false
 		}
-		basket.setWarehouseInventory(inventory)
+		basket.warehouseInventory = inventory
 
 		when: "user checks out both products"
 		basket.addProduct tv
