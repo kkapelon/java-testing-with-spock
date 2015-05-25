@@ -28,7 +28,7 @@ class SequenceStubbingSpec extends spock.lang.Specification{
 		when: "user wants another TV"
 		basket.addProduct tv
 
-		then: "order can be shipped right away"
+		then: "order can no longer be shipped"
 		!basket.canShipCompletely()
 	}
 }
