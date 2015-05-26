@@ -10,13 +10,14 @@ class SequenceStubbingSpec extends spock.lang.Specification{
 
 
 	def "Inventory is always checked in the last possible moment"() {
-		given: "an basket and a TV"
+		given: "a basket and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Basket basket = new Basket()
 
-		and:"a warehouse with real time stock updates"
+		and:"a warehouse with fluctuating stock levels"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( "bravia", _) >>> [true,false]
+		inventory.availableOfProduct( "bravia", _) >>> true >> false
+		inventory.isEmpty() >>> [false, true]
 		basket.setWarehouseInventory(inventory)
 
 		when: "user checks out the tv"
