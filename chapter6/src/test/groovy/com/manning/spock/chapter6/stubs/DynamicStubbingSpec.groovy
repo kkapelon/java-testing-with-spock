@@ -26,18 +26,18 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		shippingCalculator.findShippingCostFor(tv, 2) >> 20
 		shippingCalculator.findShippingCostFor( camera, 2) >> 20
 		shippingCalculator.findShippingCostFor(hifi, 1) >> 10
-		shippingCalculator.findShippingCostFor(laptop, 1) >> 10
+		shippingCalculator.findShippingCostFor(laptop, 3) >> 30
 		basket.setShippingCalculator(shippingCalculator)
 
 
 		when: "user checks out the tv"
-		basket.addProduct tv,2
-		basket.addProduct camera,2
+		basket.addProduct tv, 2
+		basket.addProduct camera, 2
 		basket.addProduct hifi
-		basket.addProduct laptop
+		basket.addProduct laptop, 3
 
 		then: "cost is correctly calculated"
-		basket.findTotalCost() == 2 * tv.price + 2 * camera.price + hifi.price + laptop.price + 60
+		basket.findTotalCost() == 2 * tv.price + 2 * camera.price + hifi.price + 3 * laptop.price + 80
 	}
 	
 	def "Basket handles shipping charges according to product count"() {
@@ -60,13 +60,13 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 
 
 		when: "user checks out the tv"
-		basket.addProduct tv,2
-		basket.addProduct camera,2
+		basket.addProduct tv, 2
+		basket.addProduct camera, 2
 		basket.addProduct hifi
-		basket.addProduct laptop
+		basket.addProduct laptop, 3
 
 		then: "cost is correctly calculated"
-		basket.findTotalCost() == 2 * tv.price + 2 * camera.price + hifi.price + laptop.price + 60
+		basket.findTotalCost() == 2 * tv.price + 2 * camera.price + hifi.price + 3 * laptop.price + 80
 	}
 	
 	def "Downloadable goods do not have shipping cost - static"() {
