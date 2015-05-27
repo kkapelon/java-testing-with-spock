@@ -21,7 +21,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		inventory.availableOfProduct( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
-		and: "a shipping calculator"
+		and: "a shipping calculator that charges 10 dollars for each product"
 		ShippingCalculator shippingCalculator = Stub(ShippingCalculator)
 		shippingCalculator.findShippingCostFor(tv, 2) >> 20
 		shippingCalculator.findShippingCostFor( camera, 2) >> 20
@@ -53,7 +53,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		inventory.availableOfProduct( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
-		and: "a shipping calculator"
+		and: "a shipping calculator that charges 10 dollars for each product"
 		ShippingCalculator shippingCalculator = Stub(ShippingCalculator)
 		shippingCalculator.findShippingCostFor( _, _) >> { Product product, int count ->  10 * count}
 		basket.setShippingCalculator(shippingCalculator)
@@ -84,7 +84,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		inventory.availableOfProduct( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
-		and: "a shipping calculator"
+		and: "a shipping calculator that charges 10 dollars for each physical product"
 		ShippingCalculator shippingCalculator = Stub(ShippingCalculator)
 		shippingCalculator.findShippingCostFor(tv,2) >> 20
 		shippingCalculator.findShippingCostFor(camera,2) >> 20
@@ -123,7 +123,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		inventory.availableOfProduct( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
-		and: "a shipping calculator"
+		and: "a shipping calculator that charges 10 dollars for each physical product"
 		ShippingCalculator shippingCalculator = Stub(ShippingCalculator)
 		shippingCalculator.findShippingCostFor( _, _) >> 
 			{ Product product, int count ->  product.weight==0 ? 0 : 10 * count}
