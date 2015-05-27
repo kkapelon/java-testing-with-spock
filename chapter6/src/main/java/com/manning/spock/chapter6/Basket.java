@@ -44,6 +44,14 @@ public class Basket {
 	public int getProductTypesCount() {
 		return contents.size();
 	}
+	
+	public int getProductCount() {
+		int totalProducts = 0;
+		for (Entry<Product, Integer> entry : contents.entrySet()) {
+			totalProducts = totalProducts +  entry.getValue();
+		}
+		return totalProducts;
+	}
 
 	public void setWarehouseInventory(WarehouseInventory warehouseInventory) {
 		this.warehouseInventory = warehouseInventory;
