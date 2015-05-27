@@ -30,7 +30,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		basket.setShippingCalculator(shippingCalculator)
 
 
-		when: "user checks out the tv"
+		when: "user checks out several products in different quantities"
 		basket.addProduct tv, 2
 		basket.addProduct camera, 2
 		basket.addProduct hifi
@@ -59,7 +59,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		basket.setShippingCalculator(shippingCalculator)
 
 
-		when: "user checks out the tv"
+		when: "user checks out several products in different quantities"
 		basket.addProduct tv, 2
 		basket.addProduct camera, 2
 		basket.addProduct hifi
@@ -95,7 +95,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		basket.setShippingCalculator(shippingCalculator)
 
 
-		when: "user checks out the tv"
+		when: "user checks out several products in different quantities"
 		basket.addProduct tv,2
 		basket.addProduct camera,2
 		basket.addProduct hifi
@@ -130,7 +130,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 		basket.setShippingCalculator(shippingCalculator)
 
 
-		when: "user checks out the tv"
+		when: "user checks out several products in different quantities"
 		basket.addProduct tv,2
 		basket.addProduct camera,2
 		basket.addProduct hifi
