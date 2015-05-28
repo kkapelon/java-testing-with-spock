@@ -11,12 +11,12 @@ import com.manning.spock.chapter6.stubs.WarehouseInventory
 class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 
 	def "Warehouse is queried for each product - null "() {
-		given: "an basket, a TV and a camera"
+		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
 		
-		and:"a warehouse with limitless stock"
+		and: "a warehouse with limitless stock"
 		WarehouseInventory inventory = Mock(WarehouseInventory)
 		basket.setWarehouseInventory(inventory)
 
@@ -36,7 +36,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
 		
-		and:"a warehouse with limitless stock"
+		and: "a warehouse with limitless stock"
 		WarehouseInventory inventory = Mock(WarehouseInventory)
 		basket.setWarehouseInventory(inventory)
 
@@ -56,7 +56,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
 		
-		and:"a warehouse with limitless stock"
+		and: "a warehouse with limitless stock"
 		WarehouseInventory inventory = Mock(WarehouseInventory)
 		basket.setWarehouseInventory(inventory)
 

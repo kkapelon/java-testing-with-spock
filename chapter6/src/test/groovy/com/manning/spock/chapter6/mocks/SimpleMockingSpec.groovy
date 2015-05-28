@@ -8,12 +8,12 @@ import com.manning.spock.chapter6.stubs.WarehouseInventory
 
 class SimpleMockingSpec extends spock.lang.Specification{
 
-	def "If warehouse is empty nothing can be shipped"() {
-		given: "an basket and a TV"
+	def "If the warehouse is empty nothing can be shipped"() {
+		given: "a basket and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Basket basket = new Basket()
 		
-		and:"an empty warehouse"
+		and: "an empty warehouse"
 		WarehouseInventory inventory = Mock(WarehouseInventory)
 		inventory.isEmpty() >> true
 		basket.setWarehouseInventory(inventory)
@@ -25,13 +25,13 @@ class SimpleMockingSpec extends spock.lang.Specification{
 		!basket.canShipCompletely()
 	}
 	
-	def "credit card connection is closed down"() {
-		given: "an basket, a customer and a TV"
+	def "credit card connection is always closed down"() {
+		given: "a basket, a customer and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		BillableBasket basket = new BillableBasket()
 		Customer customer = new Customer(name:"John",vip:false,creditCard:"testCard")
 		
-		and:"a credit card service"
+		and: "a credit card service"
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 

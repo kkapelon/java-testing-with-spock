@@ -10,12 +10,12 @@ import com.manning.spock.chapter6.stubs.WarehouseInventory
 class OrderMockingSpec extends spock.lang.Specification{
 
 	def "credit card connection is closed down in the end"() {
-		given: "an basket, a customer and a TV"
+		given: "a basket, a customer and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		BillableBasket basket = new BillableBasket()
 		Customer customer = new Customer(name:"John",vip:false,creditCard:"testCard")
 
-		and:"a credit card service"
+		and: "a credit card service"
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 
@@ -30,12 +30,12 @@ class OrderMockingSpec extends spock.lang.Specification{
 
 
 	def "credit card connection is closed down in the end (alt)"() {
-		given: "an basket, a customer and a TV"
+		given: "a basket, a customer and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		BillableBasket basket = new BillableBasket()
 		Customer customer = new Customer(name:"John",vip:false,creditCard:"testCard")
 
-		and:"a credit card service"
+		and: "a credit card service"
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 
