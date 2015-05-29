@@ -24,8 +24,8 @@ class OrderMockingSpec extends spock.lang.Specification{
 		basket.checkout(customer)
 
 		then: "credit card is charged"
-		1 * creditCardSevice.sale(1200,customer)
 		1 * creditCardSevice.shutdown()
+		1 * creditCardSevice.sale(1200,customer)
 	}
 
 
