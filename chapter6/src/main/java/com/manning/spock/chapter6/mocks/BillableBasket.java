@@ -33,7 +33,7 @@ public class BillableBasket extends Basket{
 	public boolean fullCheckout(Customer customer)
 	{
 		CreditCardResult auth = creditCardProcessor.authorize(findOrderPrice(), customer);
-		if(auth == CreditCardResult.INVALID_CARD || auth == CreditCardResult.NO_ENOUGH_FUNDS )
+		if(auth == CreditCardResult.INVALID_CARD || auth == CreditCardResult.NOT_ENOUGH_FUNDS )
 		{
 			return false;
 		}

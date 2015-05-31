@@ -20,7 +20,7 @@ class ArgumentVerificationSpec extends spock.lang.Specification{
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 
-		when: "user checks out the tv"
+		when: "user checks out two products"
 		basket.addProduct tv
 		basket.addProduct camera
 		basket.checkout(customer)
@@ -40,7 +40,7 @@ class ArgumentVerificationSpec extends spock.lang.Specification{
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 
-		when: "user checks out the tv"
+		when: "user checks out two products"
 		basket.addProduct tv
 		basket.addProduct camera
 		basket.checkout(customer)
@@ -60,7 +60,7 @@ class ArgumentVerificationSpec extends spock.lang.Specification{
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 
-		when: "user checks out the tv"
+		when: "user checks out two products"
 		basket.addProduct tv
 		basket.addProduct camera
 		basket.checkout(customer)

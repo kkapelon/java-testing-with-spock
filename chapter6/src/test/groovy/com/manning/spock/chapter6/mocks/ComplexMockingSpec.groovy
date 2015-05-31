@@ -20,21 +20,21 @@ class ComplexMockingSpec extends spock.lang.Specification{
 		CreditCardProcessor creditCardSevice = Mock(CreditCardProcessor)
 		basket.setCreditCardProcessor(creditCardSevice)
 		
-		and: "a warehouse"
+		and: "a fully stocked warehouse"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
 		{
-			availableOfProduct(_ , _) >> false
-			isEmpty() >> true
+			availableOfProduct(_ , _) >> true
+			isEmpty() >> false
 		}
 		basket.setWarehouseInventory(inventory)
 
-		when: "user checks out the tv"
+		when: "user checks out two products"
 		basket.addProduct tv
 		basket.addProduct camera
 		boolean charged = basket.fullCheckout(customer)
 
-		then: "credit card is checked"
-		1 * creditCardSevice.authorize(1550, customer) >>  CreditCardResult.NO_ENOUGH_FUNDS
+		then: "nothing is charged if credit card does not have enough money"
+		1 * creditCardSevice.authorize(1550, customer) >>  CreditCardResult.NOT_ENOUGH_FUNDS
 		!charged
 		0 * _
 		
