@@ -10,7 +10,7 @@ import com.manning.spock.chapter6.stubs.WarehouseInventory
 class ComplexMockingSpec extends spock.lang.Specification{
 	
 	def "card has no funds"() {
-		given: "a basket, a customer and a TV"
+		given: "a basket, a customer and some products"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		BillableBasket basket = new BillableBasket()
@@ -41,7 +41,7 @@ class ComplexMockingSpec extends spock.lang.Specification{
 	}
 	
 	def "happy path for credit card sale"() {
-		given: "a basket, a customer and a TV"
+		given: "a basket, a customer and some products"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		BillableBasket basket = new BillableBasket()
@@ -80,7 +80,7 @@ class ComplexMockingSpec extends spock.lang.Specification{
 	}
 	
 	def "happy path for credit card sale - alternative"() {
-		given: "a basket, a customer and a TV"
+		given: "a basket, a customer and some products"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		BillableBasket basket = new BillableBasket()
