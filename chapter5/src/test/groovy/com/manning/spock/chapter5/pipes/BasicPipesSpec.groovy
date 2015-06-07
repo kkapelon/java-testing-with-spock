@@ -58,7 +58,7 @@ class BasicPipesSpec extends spock.lang.Specification{
 		validator.isValidImageExtension(pictureFile)
 		
 		where: "sample image names are"
-		pictureFile << GroovyCollections.combinations([["sample.","Sample.","SAMPLE."],['j', 'J'], ['p', 'P'],['e',''],['g','G']])*.join()
+		pictureFile << GroovyCollections.combinations([["sample.","Sample.","SAMPLE."],['j', 'J'], ['p', 'P'],['e','E',''],['g','G']])*.join()
 	}
 	
 }
