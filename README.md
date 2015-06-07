@@ -136,6 +136,35 @@ because the build is fully automated via Maven.
 - [Listing 4.34 Grouping similar code with Groovy and Spock ](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter4/src/test/groovy/com/manning/spock/chapter4/structure/GroupingAssertionsSpec.groovy) 
 
 
+###Chapter 5
+- [Listing 5.1 Duplicate tests - DO NOT DO THIS](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/intro/NaiveImageNameValidatorSpec.groovy) 
+- [Listing 5.2 Simple Spock parameterized test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/intro/ImageNameValidatorSpec.groovy) 
+- [Listing 5.3 The given-when-then-where structure](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/intro/ImageNameValidatorSpec.groovy) 
+- [Listing 5.4 Using data tables in Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/SimpleTabularSpec.groovy) 
+- [Listing 5.5 Using data tables in Spock with typed parameters](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/SimpleTabularSpec.groovy) 
+- [Listing 5.6 Data tables with one column](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/SingleColumnSpec.groovy) 
+- [Listing 5.7 Capturing business needs in data tables](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/discount/DiscountSpec.groovy) 
+- [Listing 5.8 Lifecycle of parameterized tests](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/LifecycleDataSpec.groovyy) 
+- [Listing 5.9 Unrolling parameterized scenarios](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/UnrollDataSpec.groovy) 
+- [Listing 5.10 Printing parameters of each scenario](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/UnrollDataSpec.groovy) 
+- [Listing 5.11 Parameter rendering on the test method](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/UnrollDataSpec.groovy) 
+- [Listing 5.12 Custom expressions in data tables](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/expressions/ExpressionInTableSpec.groovy) 
+- [Listing 5.13 Trivial example of data pipes](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/pipes/BasicPipesSpec.groovy) 
+- [Listing 5.14 Using Groovy ranges as data generators](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/pipes/BasicPipesSpec.groovy) 
+- [Listing 5.15 Using Groovy combinations](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/pipes/BasicPipesSpec.groovy) 
+- [Listing 5.16 Constant parameters in Spock tests](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/pipes/DerivedValuesSpec.groovy) 
+- [Listing 5.17 Derived parameters in Spock tests](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/pipes/DerivedValuesSpec.groovy) 
+- [Data file validImageNames.txt](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/resources/validImageNames.txt) 
+- [Listing 5.18 Using existing data generators](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/pipes/FileReadingSpec.groovy) 
+- [Data file invalidImageNames.txt](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/resources/invalidImageNames.txt) 
+- [Listing 5.19 Java iterator that processes invalidImageNames.txt](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/java/com/manning/spock/chapter5/custom/InvalidNamesGen.java) 
+- [Listing 5.20 Using Java iterators in Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/custom/DataIteratorsSpec.groovy) 
+- [Data file imageNames.txt](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/resources/imageNames.txt) 
+- [Listing 5.21 Java multi-valued iterator](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/java/com/manning/spock/chapter5/custom/MultiVarReader.java) 
+- [Listing 5.22 Using multi-valued iterators in Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/custom/MultipleVarGenSpec.groovy) 
+- [Listing 5.23 Using multi-valued assignments in Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/custom/MultipleVarGenSpec.groovy) 
+
+
 ## Issues with the code.
 
 If you find a problem with the code feel free to open an [issue](https://github.com/kkapelon/java-testing-with-spock/issues). If you feel
