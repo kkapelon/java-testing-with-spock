@@ -144,7 +144,7 @@ because the build is fully automated via Maven.
 - [Listing 5.5 Using data tables in Spock with typed parameters](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/SimpleTabularSpec.groovy) 
 - [Listing 5.6 Data tables with one column](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/SingleColumnSpec.groovy) 
 - [Listing 5.7 Capturing business needs in data tables](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/discount/DiscountSpec.groovy) 
-- [Listing 5.8 Lifecycle of parameterized tests](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/LifecycleDataSpec.groovyy) 
+- [Listing 5.8 Lifecycle of parameterized tests](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/LifecycleDataSpec.groovy) 
 - [Listing 5.9 Unrolling parameterized scenarios](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/UnrollDataSpec.groovy) 
 - [Listing 5.10 Printing parameters of each scenario](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/UnrollDataSpec.groovy) 
 - [Listing 5.11 Parameter rendering on the test method](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/tables/UnrollDataSpec.groovy) 
