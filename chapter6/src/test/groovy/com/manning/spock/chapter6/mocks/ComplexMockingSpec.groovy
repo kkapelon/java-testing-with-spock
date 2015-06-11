@@ -23,7 +23,7 @@ class ComplexMockingSpec extends spock.lang.Specification{
 		and: "a fully stocked warehouse"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
 		{
-			availableOfProduct(_ , _) >> true
+			isProductAvailable(_ , _) >> true
 			isEmpty() >> false
 		}
 		basket.setWarehouseInventory(inventory)
@@ -68,7 +68,7 @@ class ComplexMockingSpec extends spock.lang.Specification{
 		then: "inventory is checked"
 		with(inventory)
 		{
-			2 * availableOfProduct(!null , 1) >> true
+			2 * isProductAvailable(!null , 1) >> true
 			_ * isEmpty() >> false
 		}
 		
@@ -107,7 +107,7 @@ class ComplexMockingSpec extends spock.lang.Specification{
 		}
 		
 		then: "inventory is checked"
-		2 * inventory.availableOfProduct(!null , 1) >> true
+		2 * inventory.isProductAvailable(!null , 1) >> true
 		
 		then: "credit card is charged"
 		1 * creditCardSevice.capture({myToken -> myToken.endsWith("sample")}, customer) >>  CreditCardResult.OK

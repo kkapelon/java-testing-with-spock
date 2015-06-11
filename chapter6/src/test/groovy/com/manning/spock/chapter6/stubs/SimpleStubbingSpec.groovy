@@ -32,7 +32,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		
 		and:"a warehouse with enough stock"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct("bravia",1) >> true
+		inventory.isProductAvailable("bravia",1) >> true
 		inventory.isEmpty() >> false
 		basket.setWarehouseInventory(inventory)
 
@@ -51,8 +51,8 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		
 		and:"a warehouse with partial availability"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct("bravia",1) >> true
-		inventory.availableOfProduct("panasonic",1) >> false
+		inventory.isProductAvailable("bravia",1) >> true
+		inventory.isProductAvailable("panasonic",1) >> false
 		inventory.isEmpty() >> false
 		basket.setWarehouseInventory(inventory)
 
@@ -72,8 +72,8 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		
 		and:"a warehouse with partial availability"
 		WarehouseInventory inventory = Stub(WarehouseInventory) {
-			availableOfProduct("bravia",1) >> true
-			availableOfProduct("panasonic",1) >> false
+			isProductAvailable("bravia",1) >> true
+			isProductAvailable("panasonic",1) >> false
 			isEmpty() >> false
 		}
 		basket.warehouseInventory = inventory

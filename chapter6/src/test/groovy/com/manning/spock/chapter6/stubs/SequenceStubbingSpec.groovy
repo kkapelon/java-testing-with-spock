@@ -16,7 +16,7 @@ class SequenceStubbingSpec extends spock.lang.Specification{
 
 		and:"a warehouse with fluctuating stock levels"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( "bravia", _) >>> true >> false
+		inventory.isProductAvailable( "bravia", _) >>> true >> false
 		inventory.isEmpty() >>> [false, true]
 		basket.setWarehouseInventory(inventory)
 

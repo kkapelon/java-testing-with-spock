@@ -17,7 +17,7 @@ class ArgumentStubbingSpec extends spock.lang.Specification{
 		
 		and:"a warehouse with enough stock"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( _, 1) >> true
+		inventory.isProductAvailable( _, 1) >> true
 		basket.setWarehouseInventory(inventory)
 
 		when: "user checks out the tv and the camera"
@@ -36,7 +36,7 @@ class ArgumentStubbingSpec extends spock.lang.Specification{
 		
 		and:"a warehouse with limitless stock"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( _, _) >> true
+		inventory.isProductAvailable( _, _) >> true
 		basket.setWarehouseInventory(inventory)
 
 		when: "user checks out multiple products"

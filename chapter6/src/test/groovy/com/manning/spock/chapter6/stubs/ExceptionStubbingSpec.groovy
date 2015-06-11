@@ -15,7 +15,7 @@ class ExceptionStubbingSpec extends spock.lang.Specification{
 
 		and:"a warehouse with serious issues"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( "bravia", _) >> { throw new RuntimeException("critical error") }
+		inventory.isProductAvailable( "bravia", _) >> { throw new RuntimeException("critical error") }
 		basket.setWarehouseInventory(inventory)
 
 		when: "user checks out the tv"

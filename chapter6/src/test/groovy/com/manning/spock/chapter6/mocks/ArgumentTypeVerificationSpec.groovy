@@ -27,7 +27,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 
 		then: "order can be shipped"
 		readyToShip
-		2 * inventory.availableOfProduct(!null ,1) >> true
+		2 * inventory.isProductAvailable(!null ,1) >> true
 	}
 	
 	def "Warehouse is queried for each product - type "() {
@@ -47,7 +47,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 
 		then: "order can be shipped"
 		readyToShip
-		2 * inventory.availableOfProduct(_ as String ,_ as Integer) >> true
+		2 * inventory.isProductAvailable(_ as String ,_ as Integer) >> true
 	}
 	
 	def "Warehouse is queried for each product - exact "() {
@@ -67,8 +67,8 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 
 		then: "order can be shipped"
 		!readyToShip
-		_ * inventory.availableOfProduct("bravia", _) >> false
-		1 * inventory.availableOfProduct("panasonic", 1) >> true
+		_ * inventory.isProductAvailable("bravia", _) >> false
+		1 * inventory.isProductAvailable("panasonic", 1) >> true
 	}
 	
 	

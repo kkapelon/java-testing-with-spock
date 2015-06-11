@@ -18,7 +18,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 
 		and: "a fully stocked warehouse"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( _ , _) >> true
+		inventory.isProductAvailable( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
 		and: "a shipping calculator that charges 10 dollars for each product"
@@ -50,7 +50,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 
 		and: "a fully stocked warehouse"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( _ , _) >> true
+		inventory.isProductAvailable( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
 		and: "a shipping calculator that charges 10 dollars for each product"
@@ -81,7 +81,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 
 		and: "a fully stocked warehouse"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( _ , _) >> true
+		inventory.isProductAvailable( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
 		and: "a shipping calculator that charges 10 dollars for each physical product"
@@ -120,7 +120,7 @@ class DynamicStubbingSpec extends spock.lang.Specification{
 
 		and: "a fully stocked warehouse"
 		WarehouseInventory inventory = Stub(WarehouseInventory)
-		inventory.availableOfProduct( _ , _) >> true
+		inventory.isProductAvailable( _ , _) >> true
 		basket.setWarehouseInventory(inventory)
 
 		and: "a shipping calculator that charges 10 dollars for each physical product"

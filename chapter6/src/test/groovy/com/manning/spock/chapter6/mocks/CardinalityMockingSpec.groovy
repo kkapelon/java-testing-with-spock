@@ -27,7 +27,7 @@ class CardinalityMockingSpec extends spock.lang.Specification{
 
 		then: "order can be shipped"
 		readyToShip
-		2 * inventory.availableOfProduct( _ , _) >> true
+		2 * inventory.isProductAvailable( _ , _) >> true
 		0 * inventory.preload(_ , _)
 	}
 	
@@ -48,7 +48,7 @@ class CardinalityMockingSpec extends spock.lang.Specification{
 
 		then: "order can be shipped"
 		readyToShip
-		2 * inventory.availableOfProduct( _ , _) >> true
+		2 * inventory.isProductAvailable( _ , _) >> true
 		1 * inventory.isEmpty() >> false
 		0 * inventory._
 	}
@@ -72,7 +72,7 @@ class CardinalityMockingSpec extends spock.lang.Specification{
 
 		then: "order can be shipped"
 		readyToShip
-		2 * inventory.availableOfProduct( _ , _) >> true
+		2 * inventory.isProductAvailable( _ , _) >> true
 		_ * inventory.isEmpty() >> false
 		0 * _
 	}
