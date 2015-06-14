@@ -31,7 +31,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 	}
 	
 	def "Warehouse is queried for each product - type "() {
-		given: "an basket, a TV and a camera"
+		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
@@ -51,7 +51,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 	}
 	
 	def "Warehouse is queried for each product - exact "() {
-		given: "an basket, a TV and a camera"
+		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
 		Basket basket = new Basket()
