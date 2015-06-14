@@ -43,7 +43,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		basket.canShipCompletely()
 	}
 	
-	def "If warehouse has not all products, order cannot be shipped"() {
+	def "If warehouse does not have all products, order cannot be shipped"() {
 		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
@@ -64,7 +64,7 @@ class SimpleStubbingSpec extends spock.lang.Specification{
 		!basket.canShipCompletely()
 	}
 	
-	def "If warehouse has not all products, order cannot be shipped (alt)"() {
+	def "If warehouse does not have all products, order cannot be shipped (alt)"() {
 		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
