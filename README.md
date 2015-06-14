@@ -192,7 +192,12 @@ because the build is fully automated via Maven.
 - [Listing 6.19 Verifying non-interactions for all mocks](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/CardinalityMockingSpec.groovy) 
 - [Listing 6.20 Verifying that arguments were not null when a mocked method is called](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ArgumentTypeVerificationSpec.groovy) 
 - [Listing 6.21 Verifying the type of arguments](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ArgumentTypeVerificationSpec.groovy) 
-- [Listing 6.22 Verifying exact arguments of a mocked method ](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ArgumentVerificationSpec.groovy) 
+- [Listing 6.22 Verifying exact arguments of a mocked method](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ArgumentVerificationSpec.groovy) 
+- [Listing 6.23 Verifying part of a object instance used as a mock argument](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ArgumentVerificationSpec.groovy) 
+- [Listing 6.24 Using full Groovy closures for argument verification](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ArgumentVerificationSpec.groovy) 
+- [Listing 6.25 Using Mocks and Stubs in the same test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ComplexMockingSpec.groovy) 
+- [Listing 6.26 Verifying a sequence of events with interconnected method calls](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ComplexMockingSpec.groovy) 
+- [Solution to exercise](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ReaderExerciseSpec.groovy) 
 
 ## Issues with the code.
 
