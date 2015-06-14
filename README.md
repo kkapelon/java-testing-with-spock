@@ -171,7 +171,6 @@ because the build is fully automated via Maven.
 - [Listing 6.2  Creating a Simple Stub with Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/SimpleStubbingSpec.groovy) 
 - [Listing 6.3 Stubbing specific arguments](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/SimpleStubbingSpec.groovy) 
 - [Listing 6.4 Argument based stub differentiation](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/SimpleStubbingSpec.groovy) 
-- [Listing 6.4 Argument based stub differentiation](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/SimpleStubbingSpec.groovy) 
 - [Listing 6.5 Grouping all stubbed methods](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/SimpleStubbingSpec.groovy) 
 - [Listing 6.6 Using argument matchers in stubs](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/ArgumentStubbingSpec.groovy) 
 - [Listing 6.7 Ignoring all arguments of a stubbed method when returning a response](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/stubs/ArgumentStubbingSpec.groovy) 
