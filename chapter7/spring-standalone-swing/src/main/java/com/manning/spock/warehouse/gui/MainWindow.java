@@ -8,6 +8,7 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -96,7 +97,17 @@ public class MainWindow extends JFrame implements ActionListener,TableModelListe
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals(DELETE_PRODUCT))
 		{
-			System.out.println("Removing product");
+			if(table.getSelectedRow() < 0 )
+			{
+				JOptionPane.showMessageDialog(this,
+					    "Please select a table row first",
+					    "Delete row",
+					    JOptionPane.ERROR_MESSAGE);
+				return;
+			}
+			Product deleted = tableModel.getProductFromRow(table.getSelectedRow());
+			productLoader.delete(deleted.getId());
+			reloadTable();
 		}
 		else
 		{
@@ -106,7 +117,6 @@ public class MainWindow extends JFrame implements ActionListener,TableModelListe
 			product.setStock(0);
 			product.setWeight(0);
 			
-			System.out.println("Adding new product");
 			productLoader.save(product);
 			reloadTable();
 		}
@@ -117,7 +127,7 @@ public class MainWindow extends JFrame implements ActionListener,TableModelListe
 	public void tableChanged(TableModelEvent e) {
 		Product affectedProduct = tableModel.getProductFromRow(e.getFirstRow());
 		productLoader.update(affectedProduct);
-		System.out.println("New value is "+table.getValueAt(e.getFirstRow(), e.getColumn()));
+		reloadTable();
 		
 	}
 }

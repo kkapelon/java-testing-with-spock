@@ -23,7 +23,7 @@ public class ProductLoader {
 	{
 		List<Product> result = (List<Product>) em
 				.createQuery(
-						"select product from Product product")
+						"select product from Product product order by product.name")
 				.getResultList();
 		return result;
 	}
@@ -39,6 +39,7 @@ public class ProductLoader {
 		return em.merge(product);
 	}
 	
+	@Transactional(propagation = Propagation.REQUIRED)
 	public void delete(Long productID)
 	{
 		Product product = findById(productID);
