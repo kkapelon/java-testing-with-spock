@@ -14,23 +14,44 @@
 
 	<build>
 		<plugins>
-			<!--
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<useFile>false</useFile>
-					<includes>
-						<include>**/*Spec.java</include>
-						<include>**/*Test.java</include>
-					</includes>
-				</configuration>
-			</plugin>
-			-->
+			<!-- <plugin> <artifactId>maven-surefire-plugin</artifactId> <version>2.6</version> 
+				<configuration> <useFile>false</useFile> <includes> <include>**/*Spec.java</include> 
+				<include>**/*Test.java</include> </includes> </configuration> </plugin> -->
 		</plugins>
 	</build>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<!-- Database -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.10.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 	</dependencies>
 
 </project>
