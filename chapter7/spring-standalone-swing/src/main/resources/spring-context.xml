@@ -25,7 +25,9 @@
 	
 
 	<!-- GUI stuff -->
-	<bean id="mainWindow" class="com.manning.spock.warehouse.gui.MainWindow" />
+	<bean id="mainWindow" class="com.manning.spock.warehouse.gui.MainWindow" >
+		<constructor-arg ref="productLoader" />
+	</bean>
 
 
 	<!-- Local database services -->

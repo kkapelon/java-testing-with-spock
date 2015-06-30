@@ -9,12 +9,15 @@ import com.manning.spock.warehouse.product.Product;
 
 public class ProductTableModel extends AbstractTableModel {
 
-	private List<Product> products = new ArrayList<>();
-
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
+	static final String[] COLUMN_NAMES = { "Product Name", "Price", "Weight",
+			"Stock level" };
+
+	private List<Product> products = new ArrayList<>();
 
 	public void setProducts(List<Product> products) {
 		this.products = products;
@@ -48,6 +51,38 @@ public class ProductTableModel extends AbstractTableModel {
 		default:
 			return product.getName();
 		}
+	}
+
+	@Override
+	public String getColumnName(int column) {
+		return COLUMN_NAMES[column];
+	}
+
+	public Product getProductFromRow(int row) {
+		return products.get(row);
+	}
+
+	@Override
+	public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+		Product affectedProduct = products.get(rowIndex);
+		try {
+			switch (columnIndex) {
+			case 1:
+				affectedProduct.setPrice(Integer.parseInt(aValue.toString()));
+				break;
+			case 2:
+				affectedProduct.setWeight(Integer.parseInt(aValue.toString()));
+				break;
+			case 3:
+				affectedProduct.setStock(Integer.parseInt(aValue.toString()));
+				break;
+			default:
+				affectedProduct.setName(aValue.toString());
+			}
+		} catch (NumberFormatException e) {
+			return;
+		}
+		fireTableCellUpdated(rowIndex, columnIndex);
 	}
 
 }
