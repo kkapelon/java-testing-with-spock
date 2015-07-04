@@ -28,6 +28,7 @@ public class ProductLoader {
 	
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void save(Product product) {
+		sanitizeProduct(product);
 		em.persist(product);
 	}
 	
@@ -48,6 +49,7 @@ public class ProductLoader {
 	@Transactional(propagation = Propagation.REQUIRED)
 	public Product update(Product product)
 	{
+		sanitizeProduct(product);
 		return em.merge(product);
 	}
 	
@@ -58,5 +60,12 @@ public class ProductLoader {
 	    if (product != null) {
 	      em.remove(product);
 	    }
+	}
+	
+	private void sanitizeProduct(Product product)
+	{
+		product.setStock(Math.max(0,product.getStock()));
+		product.setPrice(Math.max(0,product.getPrice()));
+		product.setWeight(Math.max(0,product.getWeight()));
 	}
 }
