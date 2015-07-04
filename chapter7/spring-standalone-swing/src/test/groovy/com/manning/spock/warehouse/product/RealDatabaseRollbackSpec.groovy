@@ -15,8 +15,9 @@ class RealDatabaseRollbackSpec extends spock.lang.Specification{
 	@Autowired
 	ProductLoader productLoader
 
+	@Rollback
 	@Sql("clear-db.sql")
-	public void "Testing hibernate mapping of product class - rollback"() {
+	def "Testing hibernate mapping of product class - rollback"() {
 		given: "the creation of a new product"
 		productLoader.createDefaultProduct()
 

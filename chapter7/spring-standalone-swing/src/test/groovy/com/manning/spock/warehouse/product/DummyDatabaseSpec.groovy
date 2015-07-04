@@ -8,14 +8,14 @@ import org.springframework.transaction.annotation.Transactional
 
 import spock.lang.*
 
-@ContextConfiguration(locations = "classpath:spring-context.xml")
-class RealDatabaseSpec extends spock.lang.Specification{
+@ContextConfiguration(locations = "classpath:reduced-test-context.xml")
+@Transactional
+class DummyDatabaseSpec extends spock.lang.Specification{
 
 	@Autowired
 	ProductLoader productLoader
 
-	@Sql("clear-db.sql")
-	def "Testing hibernate mapping of product class"() {
+	def "Testing hibernate mapping of product class - mem db"() {
 		given: "the creation of a new product"
 		productLoader.createDefaultProduct()
 
@@ -26,7 +26,7 @@ class RealDatabaseSpec extends spock.lang.Specification{
 		allProducts.size() == 1
 
 		and: "it should start with zero quantity"
-		allProducts[0].getStock() ==0
+		allProducts[0].stock ==0
 	}
 }
 
