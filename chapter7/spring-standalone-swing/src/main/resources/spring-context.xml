@@ -58,6 +58,14 @@
 				<property name="databasePlatform" value="org.hibernate.dialect.HSQLDialect" />
 			</bean>
 		</property>
+		<!-- This property is used to disable a harmless warning. No need to include in your own code -->
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.ejb.entitymanager_factory_name">
+					dummy
+				</prop>
+			</props>
+		</property>
 	</bean>
 
 	<bean id="transactionManager2" class="org.springframework.orm.jpa.JpaTransactionManager">
