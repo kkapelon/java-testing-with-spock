@@ -111,13 +111,7 @@ public class MainWindow extends JFrame implements ActionListener,TableModelListe
 		}
 		else
 		{
-			Product product = new Product();
-			product.setName("A product");
-			product.setPrice(0);
-			product.setStock(0);
-			product.setWeight(0);
-			
-			productLoader.save(product);
+			productLoader.createDefaultProduct();
 			reloadTable();
 		}
 		

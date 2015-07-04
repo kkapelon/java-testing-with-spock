@@ -15,6 +15,18 @@ public class ProductLoader {
 	private EntityManager em;
 	
 	@Transactional(propagation = Propagation.REQUIRED)
+	public Product createDefaultProduct() {
+		Product product = new Product();
+		product.setName("A product");
+		product.setPrice(0);
+		product.setStock(0);
+		product.setWeight(0);
+		
+		em.persist(product);
+		return product;
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRED)
 	public void save(Product product) {
 		em.persist(product);
 	}
