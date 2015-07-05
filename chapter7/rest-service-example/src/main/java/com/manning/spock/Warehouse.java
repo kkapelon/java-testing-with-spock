@@ -3,6 +3,9 @@
  */
 package com.manning.spock;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,41 +16,31 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class Warehouse {
-	
-	private int counter =0;
 
-	
+	private List<Product> existingProducts = new ArrayList<Product>();
+
 	@RequestMapping(value = "/status", method = RequestMethod.GET)
 	public String healthcheck() {
-		counter++;
-		return "Hello " +counter;
+		return "Up and Running";
 	}
-	
+
 	@RequestMapping(value = "/products", method = RequestMethod.GET)
-	public String listProducts() {
-		counter++;
-		return "Hello " +counter;
+	public List<Product> listProducts() {
+		return existingProducts;
 	}
-	
-//	@RequestMapping(value = "/vmname.html", method = RequestMethod.POST, params = "virtualmachinename")
-//	public ModelAndView apply(@RequestParam("virtualmachinename") String virtualmachinename) {
-//		if(StringUtils.isEmpty(virtualmachinename))
-//		{
-//			logger.debug("Empty name");
-//			mav.addObject("errors", "Name cannot be empty");
-//			prepare();
-//			
-//			return mav;
-//		}
-//		else
-//		{
-//			logger.debug("Saving VM name");
-//			settings.setName(virtualmachinename);
-//			return getNext().show();
-//		}
-//		
-//	}
-	
-	
-	
+
+	@RequestMapping(value = "/products", method = RequestMethod.POST)
+	public Product createDefaultProduct() {
+		Product product = new Product();
+		product.setName("A product");
+		product.setPrice(0);
+		product.setStock(0);
+		product.setWeight(0);
+		product.setId(existingProducts.size());
+		existingProducts.add(product);
+
+		return product;
+
+	}
+
 }
