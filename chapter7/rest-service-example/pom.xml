@@ -77,12 +77,30 @@
 					</includes>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>org.apache.tomcat.maven</groupId> <artifactId>tomcat7-maven-plugin</artifactId> 
-				<version>2.2</version> <executions> <execution> <id>tomcat-run</id> <goals> 
-				<goal>run-war-only</goal> </goals> <phase>pre-integration-test</phase> <configuration> 
-				<fork>true</fork> </configuration> </execution> <execution> <id>tomcat-shutdown</id> 
-				<goals> <goal>shutdown</goal> </goals> <phase>post-integration-test</phase> 
-				</execution> </executions> </plugin> -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>tomcat-run</id>
+						<goals>
+							<goal>run-war-only</goal>
+						</goals>
+						<phase>pre-integration-test</phase>
+						<configuration>
+							<fork>true</fork>
+						</configuration>
+					</execution>
+					<execution>
+						<id>tomcat-shutdown</id>
+						<goals>
+							<goal>shutdown</goal>
+						</goals>
+						<phase>post-integration-test</phase>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<properties>
