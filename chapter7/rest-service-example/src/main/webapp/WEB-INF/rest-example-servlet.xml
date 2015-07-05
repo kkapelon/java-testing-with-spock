@@ -15,7 +15,7 @@
 	
 	<!-- An example of web service -->
 	
-	<bean class="com.manning.spock.Warehouse" scope="session">
+	<bean class="com.manning.spock.Warehouse" scope="application">
 	</bean>
 	
 
