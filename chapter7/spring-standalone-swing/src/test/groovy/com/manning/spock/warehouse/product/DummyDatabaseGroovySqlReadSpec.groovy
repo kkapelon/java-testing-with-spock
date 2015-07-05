@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import spock.lang.*
 
 @ContextConfiguration(locations = "classpath:reduced-test-context.xml")
+@Transactional
 class DummyDatabaseGroovySqlReadSpec extends spock.lang.Specification{
 	@Autowired
 	DataSource dataSource
