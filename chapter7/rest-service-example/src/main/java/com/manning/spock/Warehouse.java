@@ -48,6 +48,14 @@ public class Warehouse {
 
 	}
 	
+	@RequestMapping(value = "/products", method = RequestMethod.DELETE)
+	public String deleteAllProducts() {
+		int count = existingProducts.size();
+		existingProducts.clear();
+		return "Removed "+count +" products";
+
+	}
+	
 	@RequestMapping(value = "/products/{productId}", method = RequestMethod.GET)
 	public Product listProduct(@PathVariable Integer productId) {
 		if(productId<0|| productId >= existingProducts.size())

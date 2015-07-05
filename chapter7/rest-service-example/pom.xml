@@ -71,10 +71,10 @@
 					</includes>
 				</configuration>
 			</plugin>
+			<!--  
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
-				<!-- or if you want to use tomcat 6.x <artifactId>tomcat6-maven-plugin</artifactId> -->
 				<version>2.2</version>
 				<executions>
 					<execution>
@@ -95,7 +95,7 @@
 						<phase>post-integration-test</phase>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 	<properties>
