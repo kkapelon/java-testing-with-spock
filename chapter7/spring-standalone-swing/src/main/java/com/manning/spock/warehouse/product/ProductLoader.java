@@ -30,6 +30,7 @@ public class ProductLoader {
 	public void save(Product product) {
 		sanitizeProduct(product);
 		em.persist(product);
+		em.flush();
 	}
 	
 	public List<Product> getAllProducts()
