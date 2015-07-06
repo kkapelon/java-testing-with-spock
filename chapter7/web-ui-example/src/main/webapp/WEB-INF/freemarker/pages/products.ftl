@@ -11,6 +11,18 @@
 
 <p>There are ${allProducts?size} products now.</p>
 			
+			<table border="1" align="left" width="100%">
+			<tr><th>Name</th><th>Price</th><th>Weight</th><th>Stock level</th></tr>
+    <#list allProducts as product>
+    
+    <tr>
+        <td>${product.name}</td>
+        <td>${product.price}</td>
+        <td>${product.weight}</td>
+        <td>${product.stock}</td>
+    </tr>
+    </#list>
+    </table>
 					
 			
 			
