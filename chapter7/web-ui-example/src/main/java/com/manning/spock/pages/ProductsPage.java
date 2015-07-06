@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.manning.spock.screens.other;
+package com.manning.spock.pages;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,25 +20,25 @@ import com.manning.spock.model.ProductList;
  * 
  */
 @Controller
-public class AddProductPage {
+public class ProductsPage {
 
-	private static final Logger logger = LoggerFactory.getLogger(AddProductPage.class);
+	private static final Logger logger = LoggerFactory.getLogger(ProductsPage.class);
 
 	private ModelAndView mav = null;
 	
 	private ProductList productList = null;
 	
 
-	public AddProductPage() {
+	public ProductsPage() {
 		mav = new ModelAndView();
-		mav.setViewName("other/add");
+		mav.setViewName("pages/products");
 		mav.addObject("selectedTab", "welcome");
-		mav.addObject("pageName", "Adding a new product");
+		mav.addObject("pageName", "Listing all products");
 	}
 
-	@RequestMapping(value = "/add-product.html", method = RequestMethod.GET)
+	@RequestMapping(value = "/products.html", method = RequestMethod.GET)
 	public ModelAndView index() {
-		logger.debug("Welcome page is showing");
+		mav.addObject("allProducts",productList.getAllProducts());
 		return mav;
 	}
 

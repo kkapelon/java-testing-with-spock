@@ -5,12 +5,13 @@
 	<div class="colleft">
 		<div class="col1">
 			<!-- Column 1 start -->
-			<h2>New Product details</h2>
-			<p>dsd</p>
-
-
-
+			<h2>Current products in the warehouse</h2>
 			
+
+
+<p>There are ${allProducts?size} products now.</p>
+			
+					
 			
 			
 			<!-- Column 1 end -->

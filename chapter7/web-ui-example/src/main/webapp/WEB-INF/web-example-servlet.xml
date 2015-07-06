@@ -12,17 +12,17 @@
 	<mvc:annotation-driven />
 	
 
-	<bean class="com.manning.spock.screens.other.About" scope="request">
+	<bean class="com.manning.spock.pages.About" scope="request">
 	</bean>
 	
-	<bean class="com.manning.spock.screens.other.Welcome" scope="request">
+	<bean class="com.manning.spock.pages.Welcome" scope="request">
 	</bean>
 	
-	<bean class="com.manning.spock.screens.other.ProductsPage" scope="request">
+	<bean class="com.manning.spock.pages.ProductsPage" scope="request">
 		<property name="productList" ref="productList" />
 	</bean>
 	
-	<bean class="com.manning.spock.screens.other.AddProductPage" scope="request">
+	<bean class="com.manning.spock.pages.AddProductPage" scope="request">
 		<property name="productList" ref="productList" />
 	</bean>
 	

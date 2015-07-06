@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.manning.spock.screens.other;
+package com.manning.spock.pages;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,7 @@ public class About {
 
 	public About() {
 		mav = new ModelAndView();
-		mav.setViewName("other/about");
+		mav.setViewName("pages/about");
 		mav.addObject("selectedTab", "about");
 		mav.addObject("pageName", "Some Technical Notes");
 	}
