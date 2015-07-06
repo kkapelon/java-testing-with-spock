@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss} %-5p %logger{36} %m%n
+			</pattern>
+		</encoder>
+	</appender>
+	<logger name="com.vmware" level="DEBUG" />
+	<logger name="org.springframework" level="INFO" />
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

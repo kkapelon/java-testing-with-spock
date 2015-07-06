@@ -12,6 +12,7 @@
 	<modules>
 		<module>spring-standalone-swing</module>
 		<module>rest-service-example</module>
+		<module>web-ui-example</module>
 	</modules>
 	
 	<properties>

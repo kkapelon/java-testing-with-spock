@@ -1,0 +1,94 @@
+/* 
+Style: OrangeYouGlad.css
+Created by Randy Peterman, September 2nd, 2005
+http://design.randypeterman.com
+using TopStyle Pro 3.12
+
+Requires one image: down_arrow.gif for {mostly} 
+Standards Compliant browsers like Firefox.
+*/
+table{
+	background: #FFEFD5;
+	border-spacing: 1px;
+	border-collapse: collapse;
+}
+caption{
+	width: 100%;
+	text-align: left;
+	font-weight: bolder;
+	border-top: 4px double #bbb;
+}
+table *{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+thead{
+	background: #FFA109;
+}
+thead * th{
+	border-bottom: 1px outset;
+	border-top: 1px outset;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+tfoot{
+	background: #FFA109;
+}
+
+table * a{
+	color: #000;
+}
+tbody * th{
+	background: #FFDCA2;
+	border-right: 1px solid #956500 !important;
+	border-bottom: 1px solid #fff;
+	font-size: medium;
+	font-weight: normal;
+	padding-left: 2px;
+	padding-bottom: 4px;
+	text-align: left;
+	vertical-align: top;
+}
+tbody * th a{
+		color: blue !important;
+}
+tbody * td{
+	border: 1px solid;
+	border-bottom: 1px solid #ddd;
+	padding-left: 3px;
+	text-align: left;
+	vertical-align: top;
+}
+tbody tr.odd{
+	background: #FFF8EA;
+}
+tbody tr.odd th{
+	background: #FFE2B0;
+}
+tfoot tr td[colspan='4']{
+	text-align: right;
+	font-style: italic;
+	padding-right: 4px;
+}
+tbody td a{
+	min-height: 20px;
+	padding-left: 20px;
+	float: left;
+	padding-right: 4px;
+}
+tbody tr th+td a{
+	background-image: none;
+	padding: inherit;
+	float: inherit;
+}
+/* Fake for IE, argh! Maybe IE 7 will resolve this. */
+tbody td a{
+	_background: none;
+	_background-position: inherit;
+	_padding-left: 2px;
+	_float: inherit;
+	_padding-right: inherit;
+}
+tfoot * th{
+	border-bottom: 1px outset;
+	border-top: 1px outset;
+}
