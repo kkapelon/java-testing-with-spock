@@ -182,7 +182,7 @@
 	</build>
 	<properties>
 		<gebVersion>0.10.0</gebVersion>
-		<seleniumVersion>2.43.1</seleniumVersion>
+		<seleniumVersion>2.46.0</seleniumVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
