@@ -19,10 +19,8 @@ class HomePageSpec extends GebSpec {
 		}
 		
 		then: "First page should load"
-		Browser.drive {
-			// make sure we actually got to the page
-			title == "Spock/Geb Web example"
-		}
+		// make sure we actually got to the page
+		title == "Spock/Geb Web example"
 		
 	}
 	
@@ -33,12 +31,9 @@ class HomePageSpec extends GebSpec {
 		}
 		
 		then: "First page should load"
-		Browser.drive {
-			// make sure we actually got to the page
-			title == "Spock/Geb Web example"
-			$("h1").text() == "Java Testing with Spock - Sample code"
-			$(".active").text() == "Welcome"
-		}
+		title == "Spock/Geb Web example"
+		$("h1").text() == "Java Testing with Spock - Sample code"
+		$(".active").text() == "Welcome"
 		
 	}
 
