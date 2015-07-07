@@ -14,8 +14,8 @@
 			</p>
 			</#if>
 			<#if (success??)>
-			<p>
-			${success}. See <a href="products.html">all products</a>
+			<p><span class="ok">
+			${success}.</span>  See <a href="products.html">all products</a>
 			</p>
 			</#if>
 			
@@ -26,7 +26,7 @@
 			Price: <input size="7" name="productPrice" value="${productPrice}" />
 			</p>
 			
-			<input type="submit" value="Add this product"/>
+			<input id="createProductButton" type="submit" value="Add this product"/>
 			</form>
 
 
