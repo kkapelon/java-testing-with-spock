@@ -28,7 +28,7 @@
 	
 	<!-- Data object for all settings (one per user session) -->
 	
-	<bean id="productList" class="com.manning.spock.model.ProductList" scope="session">
+	<bean id="productList" class="com.manning.spock.model.ProductList" scope="application">
 	</bean>
 	
 	<!-- freemarker config -->
