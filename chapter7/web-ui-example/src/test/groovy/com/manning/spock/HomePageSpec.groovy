@@ -1,5 +1,4 @@
-
-package com.codepipes.wizard;
+package com.manning.spock;
 
 import geb.spock.GebSpec
 import spock.lang.*
