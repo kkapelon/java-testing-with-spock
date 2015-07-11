@@ -9,14 +9,14 @@ import spock.lang.*
 class ManualInjectionSpec extends spock.lang.Specification{
 
 	def "Testing hibernate mapping of product class - mem db"() {
-		given: "the creation of a new product"
+		given: "a product DAO"
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("reduced-test-context.xml");
 		ProductLoader productLoader = ctx.getBean(ProductLoader.class)
 
-		when: "we read back that product"
+		when: "we products from the DB"
 		List<Product> allProducts = productLoader.getAllProducts();
 
-		then: "it should be present in the db"
+		then: "the db is empty"
 		allProducts.size() == 0
 
 	}
