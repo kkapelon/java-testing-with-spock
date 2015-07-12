@@ -46,9 +46,6 @@ class GroovyRestClientSpec extends Specification {
 	}
 	
 	def "Creating a product"() {
-		given: "a rest template"
-		RestTemplate restTemplate = new RestTemplate()
-		
 		when: "a new product is created"
 		def response = client.post(path : "products")
 		

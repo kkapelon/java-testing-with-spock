@@ -13,7 +13,7 @@ class ManualInjectionSpec extends spock.lang.Specification{
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("reduced-test-context.xml");
 		ProductLoader productLoader = ctx.getBean(ProductLoader.class)
 
-		when: "we products from the DB"
+		when: "we read products from the DB"
 		List<Product> allProducts = productLoader.getAllProducts();
 
 		then: "the db is empty"
