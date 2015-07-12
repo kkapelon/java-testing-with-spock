@@ -26,10 +26,11 @@ class AddProductGebSpec extends GebSpec {
 	
 	def "Creation of new product"() {
 		when: "I fill in product details"
+		$("input[name='productName']").value("Bravia TV")
 		$("#createProductButton").click()
 		
 		then: "I should see a success message"
-		$(".ok").text() == "You added new product named: A product."
+		$(".ok").text() == "You added new product named: Bravia TV."
 	}
 
 	
