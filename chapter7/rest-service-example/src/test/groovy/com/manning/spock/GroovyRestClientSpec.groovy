@@ -1,6 +1,5 @@
 package com.manning.spock;
 
-import org.springframework.web.client.RestTemplate
 import groovyx.net.http.RESTClient
 
 import spock.lang.*
@@ -32,7 +31,6 @@ class GroovyRestClientSpec extends Specification {
 	def "Cleaning all products"() {
 		given: "a rest call is performed that deletes everything"
 		client.delete(path : "products")
-		RestTemplate restTemplate = new RestTemplate()
 		
 		when: "a product list is requested"
 		def response = client.get(path : "products")
