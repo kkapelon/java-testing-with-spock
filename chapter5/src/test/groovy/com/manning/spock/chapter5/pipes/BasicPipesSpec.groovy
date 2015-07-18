@@ -37,7 +37,7 @@ class BasicPipesSpec extends spock.lang.Specification{
 	
 	
 	
-	def "Multipling #first and #second is always a negative number"() {
+	def "Multiplying  #first and #second is always a negative number"() {
 		given: "a calculator"
 		Calculator calc = new Calculator()
 
@@ -54,7 +54,7 @@ class BasicPipesSpec extends spock.lang.Specification{
 		given: "an image extension checker"
 		ImageNameValidator validator = new ImageNameValidator()
 		
-		expect: "that all jpeg filenames are accepted regarless of case"
+		expect: "that all jpeg filenames are accepted regardless of case"
 		validator.isValidImageExtension(pictureFile)
 		
 		where: "sample image names are"
