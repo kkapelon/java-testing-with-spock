@@ -4,24 +4,24 @@ import javax.imageio.ImageIO
 
 import spock.lang.*
 
-import com.manning.spock.chapter8.nuker.CameraFeed
-import com.manning.spock.chapter8.nuker.HardDriveNuker
-import com.manning.spock.chapter8.nuker.SmartHardDriveNuker
+import com.manning.spock.chapter8.nuker2.CameraFeed
+import com.manning.spock.chapter8.nuker2.HardDriveNuker
+import com.manning.spock.chapter8.nuker2.SmartHardDriveNuker
 
 @Subject(SmartHardDriveNuker.class)
-class SimpleSpySpec extends spock.lang.Specification{
+class NoSpySpec extends spock.lang.Specification{
 
 	def "automatic deletion of hard disk when agents are here"() {
-		given: "a camera feed"
+		given: "a camera feed and a fake nuker"
 		CameraFeed cameraFeed = new CameraFeed()
+		HardDriveNuker nuker = Mock(HardDriveNuker)
 		
 		and: "the auto-nuker program"
-		SmartHardDriveNuker nuker = Spy(SmartHardDriveNuker)
-		nuker.deleteHardDriveNow() >> {println "Hard disk is cleared"}
+		SmartHardDriveNuker smartNuker = new SmartHardDriveNuker(nuker)
 		
 		when:"agents are knocking the door"
 		cameraFeed.setCurrentFrame(ImageIO.read(getClass().getResourceAsStream("agents.jpg")))
-		nuker.activate(cameraFeed);
+		smartNuker.activate(cameraFeed);
 
 		then: "all files of hard drive should be deleted"
 		1 * nuker.deleteHardDriveNow() 
