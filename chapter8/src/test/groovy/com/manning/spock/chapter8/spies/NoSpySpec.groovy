@@ -4,8 +4,8 @@ import javax.imageio.ImageIO
 
 import spock.lang.*
 
-import com.manning.spock.chapter8.nuker2.CameraFeed
-import com.manning.spock.chapter8.nuker2.HardDriveNuker
+import com.manning.spock.chapter8.nuker.CameraFeed
+import com.manning.spock.chapter8.nuker.HardDriveNuker
 import com.manning.spock.chapter8.nuker2.SmartHardDriveNuker
 
 @Subject(SmartHardDriveNuker.class)

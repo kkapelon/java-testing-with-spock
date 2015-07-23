@@ -1,5 +1,8 @@
 package com.manning.spock.chapter8.nuker2;
 
+import com.manning.spock.chapter8.nuker.CameraFeed;
+import com.manning.spock.chapter8.nuker.HardDriveNuker;
+
 public class SmartHardDriveNuker{
 	
 	private final HardDriveNuker hardDriveNuker;
