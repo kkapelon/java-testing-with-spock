@@ -18,7 +18,7 @@ class HelperMethodsInteractSpec extends spock.lang.Specification{
 		when:"a loan is requested"
 		customer.requests(loan)
 
-		then: "load is approved as is"
+		then: "loan is approved as is"
 		1 * loan.setApproved(true)
 		0 * loan.setAmount(_)
 		0 * loan.setYears(_)
