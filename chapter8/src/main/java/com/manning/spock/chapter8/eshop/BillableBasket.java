@@ -1,6 +1,5 @@
 package com.manning.spock.chapter8.eshop;
 
-import java.util.Date;
 import java.util.Map.Entry;
 
 public class BillableBasket extends Basket{
@@ -11,10 +10,12 @@ public class BillableBasket extends Basket{
 		this.creditCardProcessor = creditCardProcessor;
 	}
 	
-	public void checkout(Customer customer)
+	public boolean checkout(Customer customer)
 	{
-		creditCardProcessor.sale(findOrderPrice(), customer);
+		CreditCardResult result = creditCardProcessor.sale(findOrderPrice(), customer);
 		creditCardProcessor.shutdown();
+		
+		return result == CreditCardResult.OK;
 	}
 	
 	private int findOrderPrice() {
@@ -27,26 +28,7 @@ public class BillableBasket extends Basket{
 		return sum;
 	}
 	
-	public boolean fullCheckout(Customer customer)
-	{
-		CreditCardResult auth = creditCardProcessor.authorize(findOrderPrice(), customer);
-		if(auth == CreditCardResult.INVALID_CARD || auth == CreditCardResult.NOT_ENOUGH_FUNDS )
-		{
-			return false;
-		}
-		boolean canShip = canShipCompletely();
-		if(!canShip)
-		{
-			return false;
-		}
-		CreditCardResult capture = creditCardProcessor.capture(new Date().toString()+auth.getToken(), customer);
-		if(capture == CreditCardResult.INVALID_CARD)
-		{
-			return false;
-		}
-		return true;
 	
-	}
 	
 	
 }

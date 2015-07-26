@@ -1,12 +1,12 @@
 package com.manning.spock.chapter8.eshop;
 
-public interface CreditCardProcessor {
+public class CreditCardProcessor {
 
-	CreditCardResult sale(int amount, Customer customer);
+	public CreditCardResult sale(int amount, Customer customer){
+		return CreditCardResult.OK;
+	}
 	
-	CreditCardResult authorize(int amount, Customer customer);
-	
-	CreditCardResult capture(String token, Customer customer);
-	
-	void shutdown();
+	void shutdown(){
+		
+	}
 }
