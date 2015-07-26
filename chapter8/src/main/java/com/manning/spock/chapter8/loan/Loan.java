@@ -4,7 +4,19 @@ public class Loan {
 
 	private int amount;
 	private long instalments;
+	private int years;
+	private ContactDetails contactDetails = new ContactDetails();
 	
+	
+	
+	public int getYears() {
+		return years;
+	}
+
+	public void setYears(int years) {
+		this.years = years;
+	}
+
 	private boolean approved = false;
 
 	public int getAmount() {
@@ -30,6 +42,11 @@ public class Loan {
 	public void setApproved(boolean approved) {
 		this.approved = approved;
 	}
+
+	public ContactDetails getContactDetails() {
+		return contactDetails;
+	}
+	
 	
 	
 }

@@ -86,14 +86,14 @@ class HelperMethodsSpec extends spock.lang.Specification{
 		customer.owns(createSampleCreditCard("whatever",customerName))
 		customer.owns(createSampleCreditCard("notImportant",customerName))
 		
+		expect: "customer already has 3 cards"
+		customer.getCards().size() == 3
+		
 		when:"a loan is requested"
 		Loan loan = new Loan()
 		customer.requests(loan)
 		
-		then: "customer already has 3 cards"
-		customer.getCards().size() == 3
-		
-		and: "therefore loan is not approved"
+		then: "therefore loan is not approved"
 		!loan.approved
 	}
 	
