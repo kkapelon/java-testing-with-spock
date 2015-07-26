@@ -10,4 +10,9 @@ public class CreditCardProcessor {
 	public void shutdown(){
 		System.out.println("Shutting down");
 	}
+	
+	public boolean online()
+	{
+		return true;
+	}
 }
