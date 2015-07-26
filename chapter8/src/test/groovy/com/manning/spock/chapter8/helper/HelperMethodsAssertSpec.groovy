@@ -19,7 +19,7 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		when:"a loan is requested"
 		customer.requests(loan)
 
-		then: "load is approved as is"
+		then: "loan is approved as is"
 		loan.approved
 		loan.amount == 200.000
 		loan.years == 5
@@ -44,7 +44,7 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		when:"a loan is requested"
 		customer.requests(loan)
 
-		then: "load is approved as is"
+		then: "loan is approved as is"
 		with(loan)
 		{
 			approved
@@ -77,7 +77,7 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		when:"a loan is requested"
 		customer.requests(loan)
 
-		then: "load is approved as is"
+		then: "loan is approved as is"
 		loanApprovedAsRequested(customer,loan,sampleTimeSpan,sampleAmount)
 		
 		and: "contact details are kept or record"

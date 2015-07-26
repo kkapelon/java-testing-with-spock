@@ -31,6 +31,10 @@ public class Customer {
 		{
 			result = false;
 		}
+		if(loan.getAmount() > 500.000)
+		{
+			result = false;
+		}
 		
 		if(result)
 		{
