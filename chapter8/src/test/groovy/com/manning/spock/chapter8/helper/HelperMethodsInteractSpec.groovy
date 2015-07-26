@@ -22,8 +22,8 @@ class HelperMethodsInteractSpec extends spock.lang.Specification{
 		1 * loan.setApproved(true)
 		0 * loan.setAmount(_)
 		0 * loan.setYears(_)
-		1 * loan.getYears() >> 5
-		1 * loan.getAmount() >> 200.000
+		_ * loan.getYears() >> 5
+		_ * loan.getAmount() >> 200.000
 		_ * loan.getContactDetails() >> new ContactDetails()
 		
 	}
@@ -53,8 +53,8 @@ class HelperMethodsInteractSpec extends spock.lang.Specification{
 	
 	private void loanDetailsWereExamined(Loan loan)
 	{
-		1 * loan.getYears() >> 5
-		1 * loan.getAmount() >> 200.000
+		_ * loan.getYears() >> 5
+		_ * loan.getAmount() >> 200.000
 		_ * loan.getContactDetails() >> new ContactDetails()
 	}
 	
