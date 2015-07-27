@@ -29,7 +29,7 @@ class SimpleConditionalSpec extends spock.lang.Specification{
 
 	}
 	
-	@IgnoreIf({ os.macOs })
+	@IgnoreIf({ os.windows })
 	def "credit card charge happy path - alt"() {
 		given: "a basket, a customer and a TV"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
