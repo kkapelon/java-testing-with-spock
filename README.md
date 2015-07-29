@@ -198,6 +198,24 @@ because the build is fully automated via Maven.
 - [Listing 6.26 Verifying a sequence of events with interconnected method calls](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ComplexMockingSpec.groovy) 
 - [Solution to exercise](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ReaderExerciseSpec.groovy) 
 
+
+###Chapter 7
+- [Listing 7.1 Access Spring context from a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/RealDatabaseSpec.groovy) 
+- [Listing 7.2 Rolling back database changes automatically](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/RealDatabaseRollbackSpec.groovy) 
+- [Listing 7.3 Using a reduced Spring context for unit testing](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/DummyDatabaseSpec.groovy) 
+- [Listing 7.4 Using Groovy SQL to prepare the DB in a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/DummyDatabaseGroovySqlWriteSpec.groovy) 
+- [Listing 7.5 Using Groovy SQL to prepare the DB in a Spock test - improved](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/DummyDatabaseGroovySqlWriteSpec.groovy)
+- [Listing 7.6 Manual Spring context creation](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/ManualInjectionSpec.groovy)
+- [Listing 7.7 Testing REST services with Spock and Spring RestTemplate](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/rest-service-example/src/test/groovy/com/manning/spock/SpringRestSpec.groovy)
+- [Listing 7.8 Running multiple test methods in order](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/rest-service-example/src/test/groovy/com/manning/spock/SpringRestSpec.groovy)
+- [Listing 7.9 Using Groovy Rest Client in a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/rest-service-example/src/test/groovy/com/manning/spock/GroovyRestClientSpec.groovy)
+- [Listing 7.10 Using Geb and Spock together](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/web-ui-example/src/test/groovy/com/manning/spock/HomePageSpec.groovy)
+- [Listing 7.11 Using Geb to access page content](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/web-ui-example/src/test/groovy/com/manning/spock/HomePageSpec.groovy)
+- [Listing 7.12 Using Geb to submit HTML forms](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/web-ui-example/src/test/groovy/com/manning/spock/AddProductGebSpec.groovy)
+- [Listing 7.13 Running Spock functional tests on a Tomcat instance](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/web-ui-example/pom.xml)
+- [Listing 7.14 Using JaCoCo with Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/pom.xml)
+
+
 ## Issues with the code.
 
 If you find a problem with the code feel free to open an [issue](https://github.com/kkapelon/java-testing-with-spock/issues). If you feel
