@@ -15,7 +15,7 @@ class HomePageSpec extends GebSpec {
 	def "Trivial Geb test for homepage"() {
 		when: "I go to homepage"
 		Browser.drive {
-			go "http://localhost:8080/web-ui-example/index.html"
+			go "/web-ui-example/index.html"
 		}
 		
 		then: "First page should load"
@@ -27,7 +27,7 @@ class HomePageSpec extends GebSpec {
 	def "Trivial Geb test for homepage -header check"() {
 		when: "I go to homepage"
 		Browser.drive {
-			go "http://localhost:8080/web-ui-example/index.html"
+			go "/web-ui-example/index.html"
 		}
 		
 		then: "First page should load"

@@ -17,7 +17,7 @@ class AddProductGebSpec extends GebSpec {
 	def "Navigation to page"() {
 		when: "I go to the new product page"
 		Browser.drive {
-			go "http://localhost:8080/web-ui-example/add-product.html"
+			go "/web-ui-example/add-product.html"
 		}
 		
 		then: "the form should load"

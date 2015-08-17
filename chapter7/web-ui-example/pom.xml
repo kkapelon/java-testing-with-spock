@@ -165,6 +165,7 @@
 						</goals>
 						<phase>pre-integration-test</phase>
 						<configuration>
+							<port>8081</port>
 							<fork>true</fork>
 						</configuration>
 					</execution>
