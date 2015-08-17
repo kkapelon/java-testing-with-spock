@@ -24,8 +24,8 @@
 				</configuration>
 			</plugin>
 			<plugin>
-                <groupId>org.codehaus.gmavenplus</groupId>
-                <artifactId>gmavenplus-plugin</artifactId>
+				<groupId>org.codehaus.gmavenplus</groupId>
+				<artifactId>gmavenplus-plugin</artifactId>
 				<version>1.4</version>
 				<executions>
 					<execution>
@@ -86,6 +86,29 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
 		</dependency>
+		
+		<!-- Run mvn test and look at build/spock-reports -->
+		<dependency>
+			<groupId>com.athaydes</groupId>
+			<artifactId>spock-reports</artifactId>
+			<version>1.2.7</version>
+			<scope>test</scope>
+			<!-- this avoids affecting your version of Groovy/Spock -->
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
+<!-- Used only for  spock-reports -->
+	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<name>JCenter Repo</name>
+			<url>http://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
 </project>
