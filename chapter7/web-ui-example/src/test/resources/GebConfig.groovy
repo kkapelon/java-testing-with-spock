@@ -8,5 +8,5 @@ import org.openqa.selenium.firefox.FirefoxDriver
 
 driver = { new FirefoxDriver() }
 
-baseUrl = "http://localhost:8080"
+baseUrl = "http://localhost:8081"
 reportsDir = "target/geb-reports"
