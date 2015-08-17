@@ -39,7 +39,7 @@
 		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
 		<!-- <property name="url" value="jdbc:hsqldb:mem:artwork" /> -->
 		<property name="url"
-			value="jdbc:hsqldb:file:storage/myRealDatabase;shutdown=true" />
+			value="jdbc:hsqldb:file:target/storage/myRealDatabase;shutdown=true" />
 		<property name="username" value="sa" />
 		<property name="password" value="password" />
 	</bean>
