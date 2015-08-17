@@ -215,6 +215,36 @@ because the build is fully automated via Maven.
 - [Listing 7.13 Running Spock functional tests on a Tomcat instance](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/web-ui-example/pom.xml)
 - [Listing 7.14 Using JaCoCo with Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/pom.xml)
 
+###Chapter 8
+- [Listing 8.1 Expecting an exception in a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/ExceptionControlSpec.groovy) 
+- [Listing 8.2 Detailed examination of an expected exception](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/ExceptionControlSpec.groovy) 
+- [Listing 8.3 Explicit declaration that an exception should not happen](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/ExceptionControlSpec.groovy) 
+- [Listing 8.4 Marking a test method with the issue it solves](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/IssueDocumentationSpec.groovy) 
+- [Listing 8.5 Using the URL of an issue solved by a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/IssueDocumentationSpec.groovy) 
+- [Listing 8.6 Marking a Spock test with multiple issues](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/IssueDocumentationSpec.groovy) 
+- [Listing 8.7 Declaring a test timeout](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/TimeoutLimitSpec.groovy) 
+- [Listing 8.8 Declaring a test timeout - custom unit](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/TimeoutLimitSpec.groovy) 
+- [Listing 8.9 Ignoring a single test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/SimpleIgnoreSpec.groovy) 
+- [Listing 8.10 Ignoring all tests apart from one](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/KeepOneSpec.groovy) 
+- [Listing 8.11 Skipping Spock tests according to the environment](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/SimpleConditionalSpec.groovy) 
+- [Listing 8.12 Skipping a Spock test based on a dynamic precondition](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/SmartIgnoreSpec.groovy) 
+- [Listing 8.13 Requires is the opposite of IgnoreIf](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/RunIfSpec.groovy) 
+- [Listing 8.14 Release resources with AutoCleanup](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/AutoCloseSpec.groovy) 
+- [Listing 8.15 A Spock test with very long setup - DO NOT DO THIS](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsSpec.groovy) 
+- [Listing 8.16 Spock test with helper methods](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsSpec.groovy) 
+- [Listing 8.17 Using arguments that imply their importance in the test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsSpec.groovy) 
+- [Listing 8.18 Spock test with dubious then: block](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsAssertSpec.groovy) 
+- [Listing 8.19 Improved Spock test with clear separation of checks](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsAssertSpec.groovy) 
+- [Listing 8.20 Using helper methods for assertions](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsAssertSpec.groovy) 
+- [Listing 8.21 Spock tests with questionable then: block](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsInteractSpec.groovy) 
+- [Listing 8.22 Helper methods with interactions need to be declared explicitly](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/helper/HelperMethodsInteractSpec.groovy) 
+- [Listing 8.23 Java code with questionable design](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/main/java/com/manning/spock/chapter8/nuker/CameraFeed.java) 
+- [Listing 8.23 Java code with questionable design](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/main/java/com/manning/spock/chapter8/nuker/HardDriveNuker.java) 
+- [Listing 8.23 Java code with questionable design](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/main/java/com/manning/spock/chapter8/nuker/SmartHardDriveNuker.java) 
+- [Listing 8.24 Creating a spy with Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/spies/SimpleSpySpec.groovy) 
+- [Listing 8.25 Refactoring Java code to avoid spies](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/main/java/com/manning/spock/chapter8/nuker2/SmartHardDriveNuker.java) 
+- [Listing 8.26 Using a mock instead of a spy](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/spies/NoSpySpec.groovy) 
+
 
 ## Issues with the code.
 
