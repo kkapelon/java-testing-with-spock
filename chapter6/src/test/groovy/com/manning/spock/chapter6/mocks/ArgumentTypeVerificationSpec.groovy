@@ -50,7 +50,7 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 		2 * inventory.isProductAvailable(_ as String ,_ as Integer) >> true
 	}
 	
-	def "Warehouse is queried for each product - exact "() {
+	def "Warehouse is queried for each product - stric "() {
 		given: "a basket, a TV and a camera"
 		Product tv = new Product(name:"bravia",price:1200,weight:18)
 		Product camera = new Product(name:"panasonic",price:350,weight:2)
@@ -66,9 +66,10 @@ class ArgumentTypeVerificationSpec extends spock.lang.Specification{
 		boolean readyToShip = basket.canShipCompletely()
 
 		then: "order can be shipped"
-		!readyToShip
-		_ * inventory.isProductAvailable("bravia", _) >> false
-		1 * inventory.isProductAvailable("panasonic", 1) >> true
+		readyToShip
+		2 * inventory.isProductAvailable(_, _) >> true
+		1 * inventory.isEmpty() >> false
+		0 * inventory._
 	}
 	
 	
