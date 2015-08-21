@@ -54,8 +54,7 @@ class GroupingAssertionsSpec extends spock.lang.Specification{
 
 		and: "an empty basket"
 		EnterprisyBasket basket = new EnterprisyBasket()
-		basket.with
-		{
+		basket.with {
 			setWarehouseInventory(warehouseInventory)
 			setCustomerResolver(new DefaultCustomerResolver())
 			setLanguage("english")
@@ -71,8 +70,7 @@ class GroupingAssertionsSpec extends spock.lang.Specification{
 		basket.checkout()
 
 		then: "warehouse is updated accordingly"
-		with(warehouseInventory)
-		{
+		with(warehouseInventory) {
 			!isEmpty()
 			getBoxesMovedToday() == 3
 			availableOfProduct("toshiba") == 2
@@ -96,8 +94,7 @@ class GroupingAssertionsSpec extends spock.lang.Specification{
 
 		and: "an empty basket"
 		EnterprisyBasket basket = new EnterprisyBasket()
-		basket.with
-		{
+		basket.with {
 			setWarehouseInventory(warehouseInventory)
 			setCustomerResolver(new DefaultCustomerResolver())
 			setLanguage "english"
@@ -115,8 +112,7 @@ class GroupingAssertionsSpec extends spock.lang.Specification{
 		basket.checkout()
 
 		then: "warehouse is updated accordingly"
-		with(warehouseInventory)
-		{
+		with(warehouseInventory) {
 			!isEmpty()
 			getBoxesMovedToday() == 3
 			availableOfProduct("toshiba") == 2

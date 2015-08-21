@@ -19,7 +19,7 @@ class DerivedValuesSpec extends spock.lang.Specification{
 
 		where: "some scenarios are"
 		first << [20,34,44,67]
-		second = -3
+		second = -1
 	}
 	
 	def "Multipling #first and #second is always a negative number (alt)"() {

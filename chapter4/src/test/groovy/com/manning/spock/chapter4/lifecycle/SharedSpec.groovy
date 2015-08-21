@@ -9,6 +9,7 @@ class SharedSpec extends spock.lang.Specification{
 	
 	@Shared
 	CreditCardProcessor creditCardProcessor;
+	
 	BillableBasket basket
 	
 	def setupSpec() {

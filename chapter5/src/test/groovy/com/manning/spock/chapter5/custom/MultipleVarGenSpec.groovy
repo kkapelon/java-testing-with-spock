@@ -17,7 +17,8 @@ class MultipleVarGenSpec extends spock.lang.Specification{
 		validator.isValidImageExtension(pictureFile) == result
 		
 		where: "sample image names are"
-		[pictureFile,result] << [["sample.jpg",true],["bunny.gif",false]]
+		[pictureFile,result] << [["sample.jpg",true],
+							     ["bunny.gif",false]]
 	}
 	
 	
