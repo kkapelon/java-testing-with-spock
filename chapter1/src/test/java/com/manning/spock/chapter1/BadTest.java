@@ -10,8 +10,7 @@ import com.manning.spock.chapter1.billing.CreditCardBilling;
 public class BadTest {
 	
 	@Test
-	public void scenario1()
-	{
+	public void scenario1() {
 		CreditCardBilling billing = new CreditCardBilling();
 		Client client = new Client();
 		billing.charge(client,150);
@@ -19,8 +18,7 @@ public class BadTest {
 	}
 	
 	@Test
-	public void scenario2()
-	{
+	public void scenario2()	{
 		CreditCardBilling billing = new CreditCardBilling();
 		Client client = new Client();
 		billing.charge(client,150);

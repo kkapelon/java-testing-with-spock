@@ -7,15 +7,13 @@ import org.junit.Test;
 public class MultiplierTest {
 	
 	@Test
-	public void simpleMultiplicationTest()
-	{
+	public void simpleMultiplicationTest() 	{
 		Multiplier multi = new Multiplier();
 		assertEquals("3 times 7 is 21",21,multi.multiply(3, 7));
 	}
 	
 	@Test
-	public void combinedOperationsTest()
-	{
+	public void combinedOperationsTest() {
 		Adder adder = new Adder();
 		Multiplier multi = new Multiplier();
 		

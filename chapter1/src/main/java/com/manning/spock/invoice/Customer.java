@@ -4,8 +4,7 @@ public class Customer {
 
 	private String email = "";
 	
-	public void hasEmail(String emailAddress)
-	{
+	public void hasEmail(String emailAddress) 	{
 		email = emailAddress;
 	}
 
