@@ -1,6 +1,6 @@
 # Java Testing with Spock
 
-Current build status: [![Build Status](https://drone.io/github.com/kkapelon/java-testing-with-spock/status.png)](https://drone.io/github.com/kkapelon/java-testing-with-spock/latest)
+Current build status: [![Build Status](https://snap-ci.com/kkapelon/java-testing-with-spock/branch/master/build_image)](https://snap-ci.com/kkapelon/java-testing-with-spock/branch/master)
 
 
 <img src="http://codepipes.com/book/java-testing-with-spock-meap.jpg" alt="Drawing" width="300" height="375"/>
