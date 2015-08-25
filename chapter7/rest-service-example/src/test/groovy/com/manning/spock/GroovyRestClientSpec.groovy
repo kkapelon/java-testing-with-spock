@@ -21,8 +21,7 @@ class GroovyRestClientSpec extends Specification {
 		def response = client.get(path : "status")
 		
 		then: "the correct message is expected"
-		with(response)
-		{
+		with(response) {
 			data.text == "Up and Running"
 			status == 200
 		}
@@ -36,8 +35,7 @@ class GroovyRestClientSpec extends Specification {
 		def response = client.get(path : "products")
 		
 		then: "it should be empty"
-		with(response)
-		{
+		with(response) {
 			data.isEmpty()
 			status == 200
 		}
@@ -51,8 +49,7 @@ class GroovyRestClientSpec extends Specification {
 		def listResponse = client.get(path : "products")
 		
 		then: "it should have default values"
-		with(response)
-		{
+		with(response) {
 			data.name == "A product"
 			data.stock == 0
 			data.price == 0

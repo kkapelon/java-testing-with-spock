@@ -48,8 +48,7 @@ class SpringRestSpec extends Specification {
 		List<Product> products = restTemplate.getForObject("http://localhost:8080/rest-service-example/products", List.class)
 		
 		then: "it should have default values"
-		with(product)
-		{
+		with(product) {
 			name == "A product"
 			stock == 0
 			price == 0

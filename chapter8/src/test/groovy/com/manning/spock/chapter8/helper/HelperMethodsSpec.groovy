@@ -97,8 +97,7 @@ class HelperMethodsSpec extends spock.lang.Specification{
 		!loan.approved
 	}
 	
-	private CreditCard createSampleCreditCard(String number, String holder)
-	{
+	private CreditCard createSampleCreditCard(String number, String holder) {
 		BankAccount account = new BankAccount()
 		account.with{
 			setNumber("45465")
