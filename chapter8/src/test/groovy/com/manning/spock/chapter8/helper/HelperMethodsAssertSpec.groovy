@@ -45,8 +45,7 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		customer.requests(loan)
 
 		then: "loan is approved as is"
-		with(loan)
-		{
+		with(loan) {
 			approved
 			amount == sampleAmount
 			years == sampleTimeSpan
@@ -55,8 +54,7 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		customer.activeLoans == 1
 		
 		and: "contact details are kept or record"
-		with(loan.contactDetails)
-		{
+		with(loan.contactDetails) {
 			getPhone() == "32434"
 			getAddress() == "10 Bakers"
 			getCity() == "London"
@@ -84,10 +82,8 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		contactDetailsMatchCustomer(customer,loan)
 	}
 	
-	private void loanApprovedAsRequested(Customer customer,Loan loan,int originalYears,int originalAmount)
-	{
-		with(loan)
-		{
+	private void loanApprovedAsRequested(Customer customer,Loan loan,int originalYears,int originalAmount) {
+		with(loan) {
 			approved
 			amount == originalAmount
 			loan.years == originalYears
@@ -96,10 +92,8 @@ class HelperMethodsAssertSpec extends spock.lang.Specification{
 		assert customer.activeLoans == 1
 	}
 	
-	private void contactDetailsMatchCustomer(Customer customer,Loan loan )
-	{
-		with(loan.contactDetails)
-		{
+	private void contactDetailsMatchCustomer(Customer customer,Loan loan ) {
+		with(loan.contactDetails) {
 			phone == customer.phone
 			address == customer.address
 			city == customer.city
