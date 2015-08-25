@@ -25,16 +25,14 @@ class DummyDatabaseGroovySqlSharedSpec extends spock.lang.Specification{
 	Sql sql
 	
 	@BeforeTransaction
-	def emptyDatabase()
-	{
+	def emptyDatabase() {
 		println "hello"
 		sql  = new Sql(dataSource)
 		sql.execute("DELETE FROM PRODUCT")
 	}
 	
 	@AfterTransaction
-	def deleteAll()
-	{
+	def deleteAll() {
 		sql.execute("DELETE FROM PRODUCT")
 	}
 
