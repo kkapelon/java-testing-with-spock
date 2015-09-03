@@ -11,8 +11,7 @@ public class CreditCardProcessor {
 		System.out.println("Shutting down");
 	}
 	
-	public boolean online()
-	{
+	public boolean online()	{
 		return true;
 	}
 }

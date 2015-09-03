@@ -7,13 +7,11 @@ public class CameraFeed {
 
 	private Image image;
 	
-	public void setCurrentFrame(Image image)
-	{
+	public void setCurrentFrame(Image image) {
 		this.image = image;
 	}
 	
-	public Image getCurrentFrame()
-	{
+	public Image getCurrentFrame()	{
 		return image;
 	}
 	

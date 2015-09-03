@@ -2,14 +2,13 @@ package com.manning.spock.chapter8.loan;
 
 public class CreditCard {
 	
-	private String holder;
-	
-	public CreditCard(String number)
-	{
-		
-	}
 	private int totalAmountSpent;
 	private int amountDue;
+	
+	public CreditCard(String number) {
+		
+	}
+	
 	public int getTotalAmountSpent() {
 		return totalAmountSpent;
 	}
@@ -22,13 +21,11 @@ public class CreditCard {
 	public void setAmountDue(int amountDue) {
 	}
 	
-	public void assign(BankAccount bankAccount)
-	{
+	public void assign(BankAccount bankAccount)	{
 		
 	}
 	
-	public void setHolder(String name)
-	{
+	public void setHolder(String name)	{
 		
 	}
 	

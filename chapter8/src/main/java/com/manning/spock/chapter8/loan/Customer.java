@@ -24,20 +24,16 @@ public class Customer {
 	}
 
 
-	public void requests(Loan loan)
-	{
+	public void requests(Loan loan)	{
 		boolean result = true;
-		if(getCards().size()>=3)
-		{
+		if(getCards().size()>=3) {
 			result = false;
 		}
-		if(loan.getAmount() > 500.000)
-		{
+		if(loan.getAmount() > 500.000)	{
 			result = false;
 		}
 		
-		if(result)
-		{
+		if(result)	{
 			loan.getContactDetails().setAddress(getAddress());
 			loan.getContactDetails().setCity(getCity());
 			loan.getContactDetails().setName(getName());
@@ -48,8 +44,7 @@ public class Customer {
 		loan.setApproved(result);
 	}
 	
-	public void owns(CreditCard creditCard)
-	{
+	public void owns(CreditCard creditCard) {
 		cards.add(creditCard);
 	}
 

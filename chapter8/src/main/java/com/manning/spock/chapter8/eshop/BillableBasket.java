@@ -10,8 +10,7 @@ public class BillableBasket extends Basket{
 		this.creditCardProcessor = creditCardProcessor;
 	}
 	
-	public boolean checkout(Customer customer)
-	{
+	public boolean checkout(Customer customer)	{
 		CreditCardResult result = creditCardProcessor.sale(findOrderPrice(), customer);
 		creditCardProcessor.shutdown();
 		
@@ -27,8 +26,5 @@ public class BillableBasket extends Basket{
 		}
 		return sum;
 	}
-	
-	
-	
 	
 }

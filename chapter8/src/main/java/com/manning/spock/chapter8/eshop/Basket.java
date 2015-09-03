@@ -54,8 +54,7 @@ public class Basket {
 	}
 
 	public boolean canShipCompletely() {
-		if(warehouseInventory.isEmpty())
-		{
+		if(warehouseInventory.isEmpty()) {
 			return false;
 		}
 		try {

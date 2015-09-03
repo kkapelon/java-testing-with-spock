@@ -7,13 +7,11 @@ public class SmartHardDriveNuker{
 	
 	private final HardDriveNuker hardDriveNuker;
 	
-	public SmartHardDriveNuker(final HardDriveNuker hardDriveNuker)
-	{
+	public SmartHardDriveNuker(final HardDriveNuker hardDriveNuker)	{
 		this.hardDriveNuker = hardDriveNuker;
 	}
 
-	public void activate(CameraFeed cameraFeed)
-	{
+	public void activate(CameraFeed cameraFeed)	{
 		if( physicalIntrusionDetected(cameraFeed))
 		{
 			hardDriveNuker.deleteHardDriveNow();
@@ -21,8 +19,7 @@ public class SmartHardDriveNuker{
 	}
 	
 	
-	private boolean physicalIntrusionDetected(CameraFeed cameraFeed)
-	{
+	private boolean physicalIntrusionDetected(CameraFeed cameraFeed) {
 		System.out.println("Complex image recognition analysis - real code");
 		return true;
 	}
