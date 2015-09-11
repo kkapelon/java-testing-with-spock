@@ -69,4 +69,10 @@ public class ProductLoader {
 		product.setPrice(Math.max(0,product.getPrice()));
 		product.setWeight(Math.max(0,product.getWeight()));
 	}
+
+	public void setEm(EntityManager em) {
+		this.em = em;
+	}
+	
+	
 }
