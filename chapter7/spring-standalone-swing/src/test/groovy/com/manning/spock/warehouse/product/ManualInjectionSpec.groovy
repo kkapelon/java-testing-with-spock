@@ -1,15 +1,11 @@
 package com.manning.spock.warehouse.product
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityManager
+import javax.persistence.EntityManagerFactory
 import javax.persistence.Persistence
 
 import org.springframework.context.ApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext
-import org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver
-import org.springframework.jdbc.datasource.DriverManagerDataSource
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter
 import org.springframework.test.context.*
 
 import spock.lang.*

@@ -6,9 +6,9 @@ import javax.sql.DataSource
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.*
-import org.springframework.test.context.transaction.AfterTransaction;
+import org.springframework.test.context.transaction.AfterTransaction
 import org.springframework.test.context.transaction.BeforeTransaction
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Transactional
 
 import spock.lang.*
 

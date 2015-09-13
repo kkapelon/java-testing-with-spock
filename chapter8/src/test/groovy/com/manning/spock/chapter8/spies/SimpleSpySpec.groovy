@@ -5,7 +5,6 @@ import javax.imageio.ImageIO
 import spock.lang.*
 
 import com.manning.spock.chapter8.nuker.CameraFeed
-import com.manning.spock.chapter8.nuker.HardDriveNuker
 import com.manning.spock.chapter8.nuker.SmartHardDriveNuker
 
 @Subject(SmartHardDriveNuker.class)

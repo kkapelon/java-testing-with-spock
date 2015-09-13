@@ -2,7 +2,6 @@ package com.manning.spock.chapter8.extras
 
 import spock.lang.*
 
-import com.manning.spock.chapter8.eshop.Basket
 import com.manning.spock.chapter8.eshop.Product
 import com.manning.spock.chapter8.eshop.WarehouseInventory
 

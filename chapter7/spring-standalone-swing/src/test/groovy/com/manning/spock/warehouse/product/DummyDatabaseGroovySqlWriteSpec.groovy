@@ -1,13 +1,12 @@
 package com.manning.spock.warehouse.product
 
+import groovy.sql.Sql
+
 import javax.sql.DataSource
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.*
-import org.springframework.transaction.annotation.Transactional
 
-import groovy.sql.Sql
 import spock.lang.*
 
 @ContextConfiguration(locations = "classpath:reduced-test-context.xml")

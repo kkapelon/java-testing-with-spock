@@ -1,11 +1,8 @@
 package com.manning.spock;
 
-import org.springframework.http.HttpMethod
 import org.springframework.web.client.RestTemplate
 
 import spock.lang.*
-
-import com.manning.spock.Product
 
 /**
  * Rest tests using Spring Rest template

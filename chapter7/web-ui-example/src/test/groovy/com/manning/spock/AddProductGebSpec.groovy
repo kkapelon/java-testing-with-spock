@@ -1,10 +1,9 @@
 
 package com.manning.spock;
 
+import geb.Browser
 import geb.spock.GebSpec
 import spock.lang.*
-import geb.spock.GebReportingSpec
-import geb.Browser
 
 /**
  * Adding a new product interactively

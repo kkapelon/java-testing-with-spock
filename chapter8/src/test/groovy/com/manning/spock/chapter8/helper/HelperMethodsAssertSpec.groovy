@@ -2,8 +2,6 @@ package com.manning.spock.chapter8.helper
 
 import spock.lang.*
 
-import com.manning.spock.chapter8.loan.BankAccount
-import com.manning.spock.chapter8.loan.CreditCard
 import com.manning.spock.chapter8.loan.Customer
 import com.manning.spock.chapter8.loan.Loan
 

@@ -1,7 +1,6 @@
 package com.manning.spock;
 
 import groovyx.net.http.RESTClient
-
 import spock.lang.*
 
 /**
