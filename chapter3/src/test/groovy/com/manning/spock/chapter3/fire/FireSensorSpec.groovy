@@ -32,7 +32,7 @@ class FireSensorSpec extends spock.lang.Specification{
 		!status.fireDepartmentNotified
 	}
 	
-	def "If more than one sensors is active then we have a fire"() {
+	def "If more than one sensor is active then we have a fire"() {
 		given: "that two fire sensors are active"
 		FireEarlyWarning fireEarlyWarning =new FireEarlyWarning()
 		int triggeredSensors = 2
