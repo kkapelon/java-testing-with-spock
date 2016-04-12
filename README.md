@@ -10,9 +10,12 @@ Current build status: [![Build Status](https://snap-ci.com/kkapelon/java-testing
 This GIT repository contains all source code for the book [Java Testing With Spock](https://www.manning.com/books/java-testing-with-spock) published by Manning.
 Each chapter is offered as an independent Maven project. 
 
-## Free chapter
+## Free chapter 1 - (intro to testing)
 You can get an overview of Spock and read a brief discussion on its features in the first
-chapter of the book. This chapter is [freely available](http://manning.com/kapelonis/JTwSpock_MEAP_ch1.pdf) in PDF format.
+chapter of the book. This chapter is [freely available](https://manning-content.s3.amazonaws.com/download/e/82672af-9245-44a7-9542-a9855972700c/SampleChapter-01.pdf) in PDF format.
+
+## Free chapter 3 - (comparison with JUnit)
+The book contains a comparison of JUnit and Spock using semi-real world code examples. If you are a die-hard JUnit believer, you will find this part of the book very interesting. This chapter is also [freely available](https://manning-content.s3.amazonaws.com/download/3/d90f946-9baf-46eb-859c-fb7a56608320/SampleChapter-03.pdf) in PDF format.
 
 ## Requirements
 To use the code samples you need the following:
