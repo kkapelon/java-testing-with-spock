@@ -3,11 +3,11 @@
 Current build status: [![Build Status](https://snap-ci.com/kkapelon/java-testing-with-spock/branch/master/build_image)](https://snap-ci.com/kkapelon/java-testing-with-spock/branch/master)
 
 
-<img src="http://codepipes.com/book/java-testing-with-spock-meap.jpg" alt="Drawing" width="300" height="375"/>
+<img src="http://codepipes.com/book/java-testing-with-spock-book.jpg" alt="Java Testing with book cover" width="297" height="375"/>
 
 ## Description
 
-This GIT repository contains all source code for the book [Java Testing With Spock](http://manning.com/kapelonis/) published by Manning.
+This GIT repository contains all source code for the book [Java Testing With Spock](https://www.manning.com/books/java-testing-with-spock) published by Manning.
 Each chapter is offered as an independent Maven project. 
 
 ## Free chapter
