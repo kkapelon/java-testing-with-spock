@@ -91,7 +91,7 @@
 		<dependency>
 			<groupId>com.athaydes</groupId>
 			<artifactId>spock-reports</artifactId>
-			<version>1.2.7</version>
+			<version>1.2.12</version>
 			<scope>test</scope>
 			<!-- this avoids affecting your version of Groovy/Spock -->
 			<exclusions>
@@ -100,6 +100,16 @@
 					<artifactId>*</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.13</version>
 		</dependency>
 	</dependencies>
 

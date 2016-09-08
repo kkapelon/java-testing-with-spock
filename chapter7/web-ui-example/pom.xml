@@ -83,7 +83,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.9</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -91,7 +91,7 @@
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
-			<version>2.4.1</version>
+			<version>2.4.7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.spockframework</groupId>
@@ -119,12 +119,10 @@
 		</dependency>
 
 
-
 	</dependencies>
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
@@ -164,7 +162,7 @@
 						</goals>
 						<phase>pre-integration-test</phase>
 						<configuration>
-							<port>8081</port>
+							<port>9081</port>
 							<fork>true</fork>
 						</configuration>
 					</execution>
@@ -203,8 +201,8 @@
 		</plugins>
 	</build>
 	<properties>
-		<gebVersion>0.10.0</gebVersion>
-		<seleniumVersion>2.46.0</seleniumVersion>
+		<gebVersion>0.13.1</gebVersion>
+		<seleniumVersion>2.53.1</seleniumVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
