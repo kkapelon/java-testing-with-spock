@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-backports-compat23:2.3.7'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile 'cglib:cglib-nodep:3.1'
+    testCompile 'org.objenesis:objenesis:2.1'
+    testCompile( 'com.athaydes:spock-reports:1.2.12' ) {
+        transitive = false
+    }
+    testCompile 'org.slf4j:slf4j-api:1.7.13'
+    testCompile 'org.slf4j:slf4j-simple:1.7.13'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+}
+
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7

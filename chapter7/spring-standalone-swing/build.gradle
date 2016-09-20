@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+ext {
+    springReleaseVersion='4.1.6.RELEASE'
+    spockGroovyVersion = '1.0-groovy-2.4'
+    groovyVersion = '2.3.7'
+    slf4jVersion = '1.6.1'
+}
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+jacoco {
+    toolVersion = '0.7.4.201502262128'
+}
+
+dependencies {
+    compile "org.springframework:spring-context:${springReleaseVersion}"
+    compile "org.springframework:spring-orm:${springReleaseVersion}"
+    compile "org.codehaus.groovy:groovy-backports-compat23:${groovyVersion}"
+    compile 'org.hibernate:hibernate-entitymanager:4.3.10.Final'
+    compile 'org.hsqldb:hsqldb:2.3.2'
+	compile 'com.h2database:h2:1.4.187'
+
+    testCompile "org.springframework:spring-test:${springReleaseVersion}"
+    testCompile "org.spockframework:spock-spring:${spockGroovyVersion}"
+    testCompile "org.spockframework:spock-core:${spockGroovyVersion}"
+    testCompile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+    testCompile 'cglib:cglib-nodep:3.1'
+    testCompile 'org.objenesis:objenesis:2.1'
+    testCompile( 'com.athaydes:spock-reports:1.2.12' ) {
+        transitive = false
+    }
+    testCompile "org.slf4j:slf4j-api:${slf4jVersion}"
+    testCompile "org.slf4j:slf4j-simple:${slf4jVersion}"
+}
+
+sourceSets {
+    main {
+        output.resourcesDir = "${buildDir}/classes"
+    }
+}
+
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7

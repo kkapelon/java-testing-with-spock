@@ -1,4 +1,18 @@
-/target/
-/.settings/
+# Eclipse
+.settings
 .classpath
 .project
+bin
+
+# IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Gradle
+.gradle
+build
+
+# Maven
+target
