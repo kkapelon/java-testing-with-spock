@@ -40,7 +40,7 @@ because the build is fully automated via Maven.
 ## Gradle Support
 There are also build.gradle files along side each maven pom.xml file in each chapter if you would like to see what an analogous gradle build file looks like. You also do not have to download and install Gradle either as the gradle wrapper files are also included in this repository. Simply type **./gradlew clean test** at the project root and Gradle will build the project and run the tests. 
 
-You can also import the build.gradle files into Eclipse if you have the Gradle Buildship plugin installed. If you are using Intellij IDEA, you can also import each chapter on its own similar to how Maven projects are imported. The idea and eclipse plugins are also configured in each build.gradle file if you want to generate the metadata files for Eclipse and IDEA projects. 
+You can also import the build.gradle files into Eclipse if you have the [Gradle Buildship plugin](https://gradle.org/eclipse/) installed. If you are using Intellij IDEA, you can also import each chapter on its own similar to how Maven projects are imported. The idea and eclipse plugins are also configured in each build.gradle file if you want to generate the metadata files for Eclipse and IDEA projects. 
 
 Note that Gradle support was contributed by [Mike Smithson] (https://github.com/mikesmithson) and is considered a bonus feature. I will provide no support for Gradle and any related issues, i.e., **you are on your own**.
 
