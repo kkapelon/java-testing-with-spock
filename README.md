@@ -1,6 +1,6 @@
 # Java Testing with Spock
 
-Current build status: [![Build Status](https://snap-ci.com/kkapelon/java-testing-with-spock/branch/master/build_image)](https://snap-ci.com/kkapelon/java-testing-with-spock/branch/master)
+Current build status: [![Build Status](https://semaphoreci.com/api/v1/codepipes/java-testing-with-spock/branches/master/badge.svg)](https://semaphoreci.com/codepipes/java-testing-with-spock)
 
 
 <img src="http://codepipes.com/book/java-testing-with-spock-book.jpg" alt="Java Testing with book cover" width="297" height="375"/>
@@ -57,7 +57,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Listing 1.7 A JUnit test where method names are unrelated to business value](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/java/com/manning/spock/chapter1/BadTest.java)
 - [Listing 1.8 A Spock test where methods explain the business requirements](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter1/src/test/groovy/com/manning/spock/chapter1/BetterSpec.groovy)
 
-###Chapter 2
+### Chapter 2
 - [Listing 2.1 Groovy class conventions](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter2/src/main/groovy/com/manning/spock/chapter2/Person.groovy)
 - [Listing 2.1 Groovy class conventions](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter2/src/main/groovy/com/manning/spock/chapter2/GettersSettersDemo.groovy)
 - [Listing 2.2 Groovy field conventions](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter2/src/main/groovy/com/manning/spock/chapter2/GettersSettersDemo2.groovy)
@@ -92,7 +92,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Listing 2.29 Using a Groovy Expando as test data generator](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter2/src/main/groovy/com/manning/spock/chapter2/ExpandoDemo.groovy)
 
 
-###Chapter 3
+### Chapter 3
 - [Listing 3.1 A fire control system in Java](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/main/java/com/manning/spock/chapter3/fire/FireEarlyWarning.java) 
 - [Listing 3.1 A fire control system in Java](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/main/java/com/manning/spock/chapter3/fire/WarningStatus.java)  
 - [Listing 3.2 A JUnit test for the fire control system](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/java/com/manning/spock/chapter3/fire/FireSensorTest.java)  
@@ -108,7 +108,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Bonus Listing -  Mocking and Stubbing with JUnit and Mockito](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/java/com/manning/spock/chapter3/coolant/CoolantSensorTest.java)  
 - [Listing 3.12 Mocking/Stubbing in a Spock parameterized test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter3/src/test/groovy/com/manning/spock/chapter3/coolant2/ImprovedCoolantSensorSpec.groovy)  
 
-###Chapter 4
+### Chapter 4
 - [Listing 4.1 Spock blocks inside a test method](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter4/src/test/groovy/com/manning/spock/chapter4/blocks/BasicBlocksSpec.groovy) 
 - [Listing 4.2 Java skeleton for an electronic basket](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter4/src/main/java/com/manning/spock/chapter4/Basket.java)  
 - [Listing 4.2 Java skeleton for an electronic basket](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter4/src/main/java/com/manning/spock/chapter4/Product.java)  
@@ -146,7 +146,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Listing 4.34 Grouping similar code with Groovy and Spock ](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter4/src/test/groovy/com/manning/spock/chapter4/structure/GroupingAssertionsSpec.groovy) 
 
 
-###Chapter 5
+### Chapter 5
 - [Listing 5.1 Duplicate tests - DO NOT DO THIS](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/intro/NaiveImageNameValidatorSpec.groovy) 
 - [Listing 5.2 Simple Spock parameterized test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/intro/ImageNameValidatorSpec.groovy) 
 - [Listing 5.3 The given-when-then-where structure](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/intro/ImageNameValidatorSpec.groovy) 
@@ -174,7 +174,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Listing 5.22 Using multi-valued iterators in Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/custom/MultipleVarGenSpec.groovy) 
 - [Listing 5.23 Using multi-valued assignments in Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter5/src/test/groovy/com/manning/spock/chapter5/custom/MultipleVarGenSpec.groovy) 
 
-###Chapter 6
+### Chapter 6
 - [Listing 6.1 Java skeleton code for the eshop](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/main/java/com/manning/spock/chapter6/Product.java) 
 - [Listing 6.1 Java skeleton code for the eshop](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/main/java/com/manning/spock/chapter6/stubs/WarehouseInventory.java) 
 - [Listing 6.1 Java skeleton code for the eshop](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/main/java/com/manning/spock/chapter6/Basket.java) 
@@ -209,7 +209,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Solution to exercise](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter6/src/test/groovy/com/manning/spock/chapter6/mocks/ReaderExerciseSpec.groovy) 
 
 
-###Chapter 7
+### Chapter 7
 - [Listing 7.1 Access Spring context from a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/RealDatabaseSpec.groovy) 
 - [Listing 7.2 Rolling back database changes automatically](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/RealDatabaseRollbackSpec.groovy) 
 - [Listing 7.3 Using a reduced Spring context for unit testing](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/src/test/groovy/com/manning/spock/warehouse/product/DummyDatabaseSpec.groovy) 
@@ -225,7 +225,7 @@ Note that Gradle support was contributed by [Mike Smithson] (https://github.com/
 - [Listing 7.13 Running Spock functional tests on a Tomcat instance](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/web-ui-example/pom.xml)
 - [Listing 7.14 Using JaCoCo with Spock](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter7/spring-standalone-swing/pom.xml)
 
-###Chapter 8
+### Chapter 8
 - [Listing 8.1 Expecting an exception in a Spock test](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/ExceptionControlSpec.groovy) 
 - [Listing 8.2 Detailed examination of an expected exception](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/ExceptionControlSpec.groovy) 
 - [Listing 8.3 Explicit declaration that an exception should not happen](https://github.com/kkapelon/java-testing-with-spock/blob/master/chapter8/src/test/groovy/com/manning/spock/chapter8/extras/ExceptionControlSpec.groovy) 
