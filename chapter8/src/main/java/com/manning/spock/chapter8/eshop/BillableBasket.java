@@ -12,7 +12,6 @@ public class BillableBasket extends Basket{
 	
 	public boolean checkout(Customer customer)	{
 		CreditCardResult result = creditCardProcessor.sale(findOrderPrice(), customer);
-		creditCardProcessor.shutdown();
 		
 		return result == CreditCardResult.OK;
 	}
